@@ -39,9 +39,9 @@ So the user creates it in the Clay app: **Campaigns, New sequence, Workflow tab,
 
 Make one change per command and read the campaign back after each. Then run `clay campaigns sequence spam-check <id> --variant-id <id>`, and fix anything it flags with the user.
 
-## 3. Do-not-contact blocklist
+## 3. Do-not-contact blocklist (optional)
 
-If the user has the do-not-contact list, run check-do-not-contact's "make a blocklist" and ask the user to upload the file in the Clay app: **Campaigns, Blocklist**. That stops emails to blocked people and domains even though the workflow doesn't check the list. If there is no list, say plainly that nothing stops an email to a customer or an open deal, and get a clear OK.
+If the user has the do-not-contact list, run check-do-not-contact's "make a blocklist" and ask the user to upload the file in the Clay app: **Campaigns, Blocklist**. That stops emails to blocked people and domains even though the workflow doesn't check the list. If there is no list, skip this step. The watchlist already left out customers and open deals when it was built. Say in one line that a company that becomes a customer or an open deal later should be taken off the watchlist.
 
 ## 4. The order for going live
 

@@ -14,7 +14,7 @@ A lookalike is a company that would read the seed's name and think "that's a com
 
 ```
 best customer → recognition profile → Clay people search (sample of 10, then the rest)
-→ domains and headcount (Clay enrichment) → recognition score → exclusions and do-not-contact
+→ domains and headcount (Clay enrichment) → recognition score → exclusions (customers, open deals, other lists)
 → second decision maker → copy A and B, agreed → work emails → people list, company list,
   draft campaign with A/B test, spam check, test send → you press Launch
 → later: read results → expand with the next 100 when the rule says so

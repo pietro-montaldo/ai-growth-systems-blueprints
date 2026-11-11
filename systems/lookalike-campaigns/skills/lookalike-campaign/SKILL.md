@@ -16,7 +16,7 @@ Settings are in `settings.md`. Run data lives in `~/.growth-systems/lookalike-ca
 ## Reference files
 
 - `references/seed-and-search.md`: confirm the seed, the recognition profile, the Clay search
-- `references/enrich-and-check.md`: domains, headcount, recognition score, exclusions, do-not-contact, second decision maker, work emails
+- `references/enrich-and-check.md`: domains, headcount, recognition score, exclusions, customers and open deals, second decision maker, work emails
 - `references/copy.md`: the template, adapting it to a seed, the A/B pair, opener, nudge, tokens
 - `references/clay-build.md`: one-time setup, people list, company list, draft campaign, checks, test send
 - `references/results-and-expand.md`: reading results and the expand rule
@@ -46,9 +46,9 @@ Draft the search from `seed.json` and the ICP card. Show the filters in plain wo
 
 Forecast Enrich Person, then Enrich Company, from the prices in settings, say the total, and ask once. Test on 2 people first. Then score per `references/enrich-and-check.md`. Show keep, check and drop with reasons and the recognition score of each company, and let you decide the borderline ones.
 
-### 4. Exclusions and do-not-contact (free)
+### 4. Exclusions (free)
 
-Drop companies already on another of your lists (`settings.md`, "Already targeted"), then check {{CRM}} and the customers list. Test the check on one known customer first, so an empty result means clear, not broken. Run check-do-not-contact if the block exists. Report what dropped and why.
+Drop companies already on another of your lists (`settings.md`, "Already targeted"), then check {{CRM}} and the customers list. Test the check on one known customer first, so an empty result means clear, not broken. If you have a do-not-contact list, run check-do-not-contact too. Report what dropped and why.
 
 ### 5. Second decision maker (search quota only)
 

@@ -28,7 +28,7 @@ Combine the seed and the ICP card. Show the user the filters in plain words befo
 | `locations.any(is_headquarters = true and ...)` | The ICP card's geography. If geography is only a preference, start with the preferred regions |
 | `products_and_services is_similar_to (...)` | 2 or 3 short phrases for what the seed sells, in the buyer's words |
 | `people.exists(...)` (optional) | A buyer title the ICP card requires, such as a founder or a Head of L&D |
-| `clay.exclude_company_identifiers((...))` | Customers, open deals, competitors, do-not-contact companies (step 4 below) |
+| `clay.exclude_company_identifiers((...))` | Customers, open deals, competitors, and do-not-contact companies if you have the list (step 4 below) |
 
 Use `industry` for verticals, not description keywords. Keep it to what the ICP actually requires: every extra filter shrinks the list.
 

@@ -29,7 +29,7 @@ You end up with a system that runs by itself in your Clay workspace. A watchlist
 1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP, product and offer, messaging and customers pages. You need: the ICP cards (who buys, company size, industry, titles, buying triggers, disqualifiers), the offer, proof you may share, and your customers. Never copy them here.
 2. **Settings:** read `settings.md`. It holds this watchlist's offer and card, its name, and every Clay id created so far. When an id is there, that piece exists: reuse it, don't build it twice.
 3. **Ask once, in one batch,** for anything still missing: who signs the deal (titles), what makes a company ready to buy now, and who you never want to contact.
-4. **Do-not-contact.** If `~/.claude/CLAUDE.md` has a `do-not-contact:start` block, use the check-do-not-contact skill in steps 2 and 7. If not, say the list is unchecked and suggest build-do-not-contact.
+4. **Do-not-contact (optional).** If `~/.claude/CLAUDE.md` has a `do-not-contact:start` block, use the check-do-not-contact skill in steps 2 and 7. If not, skip it: customers and open deals are still dropped in step 2.
 5. **Voice.** Use your `<name>-voice` skill if installed. Otherwise ask for 2 or 3 cold emails you wrote that got replies.
 
 Files this skill saves (watchlist CSVs, search references) go in `~/.growth-systems/company-signals/`, called `$STATE`.
@@ -50,7 +50,7 @@ Ask in one message:
 
 ### 2. Pause: build and review the lookalike list
 
-Follow `references/lookalikes.md`. Draft the search from the seed company and the ICP card, pull a sample of 10, show it, and adjust until you say it looks right. Then pull N plus a buffer, drop customers, open deals, competitors and do-not-contact companies, and save `$STATE/<date>-signals-watchlist.csv`. Show the counts and wait for an OK.
+Follow `references/lookalikes.md`. Draft the search from the seed company and the ICP card, pull a sample of 10, show it, and adjust until you say it looks right. Then pull N plus a buffer, drop customers, open deals, competitors and, if you have the list, do-not-contact companies, and save `$STATE/<date>-signals-watchlist.csv`. Show the counts and wait for an OK.
 
 ### 3. Pause: create the watchlist in Clay
 
@@ -70,7 +70,7 @@ Give the workflow link and ask you to press **Publish** in Clay. In list mode no
 
 ### 7. Pause: emailing, only when you ask
 
-Follow `references/campaign.md`. Write the copy from your own wording, show 2 versions filled in for a real person on the list, and agree one. Run the spam check. You create the workflow-type campaign in Clay. The skill adds the copy, then you upload your do-not-contact blocklist and press Launch. The skill adds the enrol step to the draft workflow. **You press Publish in Clay yourself.** That is the moment emails start.
+Follow `references/campaign.md`. Write the copy from your own wording, show 2 versions filled in for a real person on the list, and agree one. Run the spam check. You create the workflow-type campaign in Clay. The skill adds the copy, then (if you have a do-not-contact list) you upload its blocklist, and press Launch. The skill adds the enrol step to the draft workflow. **You press Publish in Clay yourself.** That is the moment emails start.
 
 ## Rules
 

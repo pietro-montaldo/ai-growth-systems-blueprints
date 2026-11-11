@@ -26,7 +26,7 @@ One call at a time, never in parallel. If any response shows a cooldown, or fewe
    - Otherwise one people search: the company name in double quotes (drop Inc, Ltd, GmbH and the like), 1st-degree only, 10 results.
    - **Only people whose headline names the company count.** LinkedIn also matches schools and past roles, so a result without the company in the headline is not staff.
    - Add today's engagers whose headline names the company.
-   - For up to `max_people_per_company` of them, engagers first: one lead activity read. Note whether they engaged with your content, are connected, and whether you messaged before. Drop anyone your tool flags as "do not engage", and anyone on your do-not-contact list.
+   - For up to `max_people_per_company` of them, engagers first: one lead activity read. Note whether they engaged with your content, are connected, and whether you messaged before. Drop anyone your tool flags as "do not engage", and anyone on your do-not-contact list if you have one.
    - Save `{connections, engagers, activity, note}` to the cache file.
 4. Companies over the limit, or blocked by a cap, show "LinkedIn check skipped (daily cap)".
 

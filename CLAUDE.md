@@ -19,6 +19,7 @@ Answer from `systems/<system>/README.md`. Don't copy anything.
 - Settings a person will tune go in the skill's `settings.md`, not in `SKILL.md`.
 - Students are non-technical. Plain language, short sentences, no em dashes or double dashes in prose. Frontmatter `description` is one quoted string: what it does, quoted trigger phrases, then "Not for X".
 - `SKILL.md` stays under about 150 lines. Detail goes in `references/`.
+- A do-not-contact list is always optional. Use it when the student has one; never require it, warn about it, or mark rows without it. Customers and open deals are always checked from the GTM context and CRM.
 - Every connector step has a fallback (paste, export, do it by hand). Every write waits for a yes. Every credit-spending step shows the count and the cost first. Skills never send.
 - Before finishing, search for leaks:
 

@@ -34,7 +34,7 @@ If you approve several steps at once ("go ahead with comments and Clay up to 40"
 ## Before starting
 
 1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP, competitors and messaging pages. Never copy them here.
-2. **Do-not-contact:** if `~/.claude/CLAUDE.md` has a `do-not-contact:start` block, use the check-do-not-contact skill in step 5. If not, say once that rows are marked "DNC unchecked".
+2. **Do-not-contact (optional):** if `~/.claude/CLAUDE.md` has a `do-not-contact:start` block, use the check-do-not-contact skill in step 5. If not, skip it: customers and CRM contacts are still dropped in step 5.
 3. Read `settings.md`, and `$RUN/run.json` if a run is open.
 
 ## Steps
@@ -49,7 +49,7 @@ If you approve several steps at once ("go ahead with comments and Clay up to 40"
 
 **4. Comments.** Re-read the Posts tab and apply your changes (new forecast if they changed it). Run the comments actor on the kept posts. Save to `$RUN/comments.json`: comment text, name, headline, profile link, post. Log the real spend against the forecast. Add the posts to `$STATE/posts-done.csv`.
 
-**5. Screen.** One row per person; their best comment decides. Drop anyone already in {{KNOWN_PEOPLE_SOURCES}} (search by LinkedIn link, in batches), anyone in `$STATE/seen.csv` from the last 90 days, and the creator. Then read every comment and judge it per `references/screening.md`. Run the do-not-contact check on the people kept.
+**5. Screen.** One row per person; their best comment decides. Drop anyone already in {{KNOWN_PEOPLE_SOURCES}} (search by LinkedIn link, in batches), anyone in `$STATE/seen.csv` from the last 90 days, and the creator. Then read every comment and judge it per `references/screening.md`. If you have a do-not-contact list, run its check on the people kept.
 
 **6. Enrichment forecast.** People kept × your Enrich Person price. Fill the "People" tab with everyone kept and a summary: creators, posts, comments, dropped by reason, people to enrich, Clay forecast, Apify spent. Set `stage: pause-2`.
 

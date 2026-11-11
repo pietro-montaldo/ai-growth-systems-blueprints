@@ -30,7 +30,7 @@ Pick the mode from the request. In chat, default to **Look**. From the scheduled
 ## Before starting
 
 1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP page and the product and offer page. Never copy them here. If the ICP changed since the last run, say so in one line.
-2. **Do-not-contact:** if `~/.claude/CLAUDE.md` has a `do-not-contact:start` block, use it in step 4 to drop blocked people and companies from warm paths. If not, say once that warm paths are unchecked.
+2. **Do-not-contact (optional):** if `~/.claude/CLAUDE.md` has a `do-not-contact:start` block, use it in step 4 to drop blocked people and companies from warm paths. If not, skip it.
 3. Read `settings.md` and `$STATE/last-run.json` (missing on the first run: use `lookback_hours`).
 
 ## Steps

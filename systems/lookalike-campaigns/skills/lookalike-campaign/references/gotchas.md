@@ -13,7 +13,7 @@ Read before step 2. Add your own after each run.
 - **Routine results come about 20 at a time.** Page through them, or you lose rows.
 - **Names carry badges:** letters after a surname, "(HIRING)", an emoji. Clean them before they reach an email.
 - **Company names read badly in subjects:** "Inc", taglines after a dash, a trailing "Co." that becomes "Co..". Clean them and show the list.
-- **The do-not-contact check can return nothing because it's broken.** Test it on a known customer first.
+- **The customer and CRM check can return nothing because it's broken.** Test it on a known customer first.
 - **Empty ICP fields look like "not a fit" in Clay.** Write the fit.
 - **The second decision maker search returns noise.** Check the picks.
 - **Work Email can return an address at another domain.** Fine for the company's other domain, otherwise ask.

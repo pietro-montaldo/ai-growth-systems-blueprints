@@ -27,11 +27,11 @@ Show: kept companies with score and reason, the check list, and dropped counts b
 
 For each list in settings "Already targeted", read its companies' domains and drop them here, with the reason "already on another list".
 
-## 5. Do-not-contact (free)
+## 5. Customers and open deals (free)
 
 1. **Test first.** Run the check on one known customer domain and confirm it hits. Only then does an empty result mean clear.
 2. Check every kept domain against the customers list and the CRM (anything past the first stage, partnerships, won). Every match drops the company. You decide if one should come back.
-3. Run check-do-not-contact on the list if the block exists.
+3. Optional: if you have a do-not-contact list, run check-do-not-contact on the list too.
 
 ## 6. Second decision maker (search quota only)
 

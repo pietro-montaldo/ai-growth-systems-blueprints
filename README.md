@@ -15,7 +15,7 @@ You end up with your own systems, in your own folder (and your own GitHub repo, 
 ## Before you copy a system
 
 1. **Build your GTM context first.** Every system reads your product, ICP, messaging and customers from the GTM context kit in the [AI-Growth-System-Bootcamp](https://github.com/pietro-montaldo/AI-Growth-System-Bootcamp) repo. The systems never copy that context. They read it fresh on every run, so when your ICP changes, every system changes with it.
-2. **Build your do-not-contact list** with the do-not-contact plugin in the same repo. Every system that finds people checks it before anyone is contacted.
+2. **Optional: a do-not-contact list** from the do-not-contact plugin in the same repo. If you have one, every system that finds people checks it too. If you don't, nothing is missing: the systems always skip your customers and open deals from your GTM context and CRM.
 3. **Optional: your voice skill** from voice-miner, so drafts sound like you.
 
 ## How to copy a system

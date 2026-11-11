@@ -54,7 +54,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:campaig
 - Test emails only to your own address, confirmed in this session, one at a time.
 - Only people with a Work Email from Clay go on the list. Never guess an address or a domain.
 - No personal data in a campaign, list or field name.
-- Do-not-contact: run check-do-not-contact on the list when the block exists. Otherwise say the list is unchecked.
+- Do-not-contact (optional): if you have the list, run check-do-not-contact on the people before step 5.
 
 ## Done means
 
