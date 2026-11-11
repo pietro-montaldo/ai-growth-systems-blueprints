@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+# Never commit a filled-in copy or run data here. Copies live in your own setup.
+state/
+outputs/
