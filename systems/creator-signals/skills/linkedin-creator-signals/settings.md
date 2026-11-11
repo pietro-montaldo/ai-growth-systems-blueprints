@@ -70,6 +70,7 @@ Agreed message versions, reused next week. Added by the outreach skills.
 
 - Clay people fields: campaign, company, post, cta, cta_date, cta_link (ids added in setup)
 - "Add to campaign list" routine id: (added in setup)
+- Routine inputs: email, first_name, last_name, full_name, linkedin_url, title, company, company_domain, company_linkedin, campaign, post, cta, cta_date, cta_link. Required: email, campaign, company_domain. It adds the company by domain first, then the person, linked to that company.
 - Past campaigns and their one-off lists:
 
 | Campaign | List | Run | People | Status |
