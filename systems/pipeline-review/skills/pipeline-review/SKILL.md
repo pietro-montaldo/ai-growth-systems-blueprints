@@ -2,7 +2,7 @@
 name: pipeline-review
 description: "{{YOUR_NAME}}'s weekly pipeline run for {{BUSINESS}}, action first: reviews the last 7 days of inbound ({{CHANNELS}}), new buyers and signed deals, and every open deal in {{CRM}}. It makes every CRM change it is sure of (new deals, field updates, forward stage moves, Won with proof of payment, Lost only on an explicit no) and ends with a report of what it did plus a numbered list of decisions. Use for \"review my inbound\", \"update the CRM\", \"move my pipeline\", \"who reached out\", \"who bought\", \"which deals need a nudge\", or the weekly scheduled run. Not for post-call follow-ups or prospecting new people, and it never sends anything."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Pipeline review
@@ -22,7 +22,7 @@ Settings (CRM tables, stages, what counts as an opportunity, search words, links
 
 ## The four rules
 
-1. **One 7-day window** for every channel and for buyers. The one exception is the open-deal sweep (step 5), which reads every open deal whatever its age. The window can be widened for one run, on request. With exports, the window ends at the export's newest item: say that date (see `references/collect.md`).
+1. **One 7-day window** for every channel and for buyers. The one exception is the open-deal sweep (step 5), which reads every open deal whatever its age. Buyers also look 2 days before the window, so a sale near the edge is never missed (`references/buyer-sweep.md`). The window can be widened for one run, on request. With exports, the window ends at the export's newest item: say that date (see `references/collect.md`).
 2. **Only real commercial opportunities in the CRM.** An opportunity is someone who would pay you, as defined in `settings.md`. Partnerships, free asks, favors, vendors, recruiters and existing clients sorting logistics are never logged. List the meaningful ones under "Flagged, not logged". Ignore noise.
 3. **Act when sure, ask when in doubt**, per `references/act-or-ask.md`. A wrong change in the CRM costs more than a decision answered in five seconds.
 4. **Never send, never delete.** Email replies are drafts, LinkedIn replies are text in the report. Never archive, label or delete email. Never delete or archive a CRM row. Never change anything in a payment or course platform.

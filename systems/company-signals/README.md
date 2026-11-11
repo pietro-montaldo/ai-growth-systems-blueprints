@@ -16,7 +16,7 @@ one best customer → lookalike search (Clay) → reviewed list → watchlist se
              Clay campaign you launch
 ```
 
-Seven pauses, each waiting for your yes: the plan, the lookalike list, the watchlist, the signals (created paused), the buyer workflow (tested on one hit), publishing in list mode (you press Publish), and emailing (only when you ask).
+Seven pauses, each waiting for your yes: the plan, the lookalike list, the watchlist, the signals (created paused), the buyer workflow (tested on one hit), publishing in list mode (the per-hit cost agreed, then you press Publish), and emailing (only when you ask).
 
 ## Works best with
 
@@ -27,7 +27,7 @@ Seven pauses, each waiting for your yes: the plan, the lookalike list, the watch
 
 ## Costs
 
-Signals charge per company checked on every run, plus per result for news. A rough guide for two weekly signals: 100 companies about 170 credits a month, 250 about 430, 500 about 860. Each buyer found costs a few credits more (qualify, find contacts, work email). The skill reads the real prices in Clay before you turn anything on. Start with 100 companies.
+Signals charge per company checked on every run, plus per result for news. A rough guide for two weekly signals: 100 companies about 170 credits a month, 250 about 430, 500 about 860. Adding a company to the watchlist runs Enrich Company once, so every company has its full record. Each hit costs a few credits more (qualify, find contacts, work email), and once the buyer workflow is live it spends that on every hit by itself, with no budget cap: the skill states the per-hit cost and asks once before you publish. Clay bills data credits and action credits from separate balances; every forecast shows both. The skill reads the real prices in Clay before you turn anything on. Start with 100 companies.
 
 ## What you decide
 

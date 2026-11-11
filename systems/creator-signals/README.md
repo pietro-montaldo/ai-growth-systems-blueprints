@@ -27,7 +27,7 @@ Every paid step is forecast and waits for your yes. The only exception: the week
 ## Works best with
 
 - **Apify** for posts and comments (required: nothing works without the scrape).
-- **Clay** for "Enrich Person", and for email, "Work Email" and Campaigns. Without Clay, scoring falls back to the headline and comment, clearly marked.
+- **Clay**, through the Clay CLI, for "Enrich Person", and for email, "Work Email", "Enrich Company" and Campaigns. Without Clay, scoring falls back to the headline and comment, clearly marked.
 - **Google Drive and Sheets** for the weekly file. Without them, CSV files in the run folder.
 - **Your GTM context** (ICP, competitors, messaging, customers) and your **CRM**, to skip customers and open deals.
 - Slack or email for the "ready for review" note. Optional.
@@ -42,6 +42,9 @@ Never uses a tool that reads or acts through your own LinkedIn account. LinkedIn
 | Comments (Apify) | about USD 0.002 per comment | 8 posts × 150 comments: about USD 2.40 |
 | Enrich Person (Clay) | read from your Clay workspace during setup | 40 people |
 | Work Email (Clay), email only | read from Clay during setup | the shortlist |
+| Enrich Company (Clay), email only | read from Clay during setup | one per company on the email list, so every company in Clay has its full record |
+
+Clay also bills action credits, from a separate balance, on every routine run. Every Clay forecast shows both.
 
 ## What you decide
 

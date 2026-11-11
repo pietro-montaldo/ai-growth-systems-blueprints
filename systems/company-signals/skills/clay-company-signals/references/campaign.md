@@ -50,7 +50,7 @@ If the user has the do-not-contact list, run check-do-not-contact's "make a bloc
 3. **Add the enrol step to the draft workflow**, between Save buyer and Mark company: tool node "Enroll in campaign" (`enroll-lead-in-sequence`), `campaignId` as a static value from the list above, `entityId` from Save buyer's `$.result.entityId`. Rewire Mark company to come after it. Validate.
 4. **The user presses Publish** in Clay. From then on, every qualified hit is emailed.
 
-**Keep the campaign running while the workflow is live.** A paused campaign rejects every enrolment, so each hit would spend credits on the lookups and then fail at the last step. Those failed runs can be restarted later from the failed step (`clay workflows runs rerun <id> <runId> --dry-run` first, then with the user's OK).
+**Keep the campaign running while the workflow is live.** A paused campaign rejects every enrolment, so each hit would spend credits on the lookups and then fail at the last step. To recover those runs: list them with `clay workflows runs list <id> --status failed --created-after <time>`. Then, with the user's OK, ask the user to open the workflow's Runs view in Clay, select them and choose **Re-run, Resume from failed node**. That restarts each run at the enrol step without paying for the lookups again. The CLI had no rerun command when this was written; if `clay workflows runs --help` now shows one, run it as a dry run first. Never recover with `clay workflows nodes test`: it runs one step and skips Mark company, so the company is not stamped.
 
 If an enrolment fails with `provider_result_indeterminate` or `enrollment_persistence_unavailable`, the person may already be enrolled. Never retry those: ask the user to check the campaign.
 

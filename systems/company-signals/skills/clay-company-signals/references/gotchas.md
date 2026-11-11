@@ -24,6 +24,9 @@ Each of these cost a real build an hour or more. Check them before building.
 - **The AI pick settles for the closest match** unless told not to. Say "if nobody fits, return found = false" and give a strict order.
 - **first_name is not filled from the full name.** Write it yourself.
 - **Free and trial plans may allow 100 runs per workflow, ever.** Tests count. Failed runs don't.
+- **A published version is frozen.** Every node edit, a model change too, lands in the draft only. If the draft also holds a step that must not go live yet (such as an enrol step), there is no way to ship one change without the other: wait, and tell the user what publishing would turn on.
+- **A live workflow spends on every hit, with no budget cap.** State the per-hit cost and ask once before publishing.
+- **There may be no CLI command to re-run failed runs.** Use the workflow's Runs view in the Clay app: Re-run, Resume from failed node.
 
 ## Campaigns
 

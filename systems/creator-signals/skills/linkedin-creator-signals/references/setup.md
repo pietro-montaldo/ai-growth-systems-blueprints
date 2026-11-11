@@ -7,7 +7,7 @@
 | Apify | posts and comments | stop and say so: nothing works without the scrape |
 | GTM context (Notion or repo) | ICP, competitors, messaging | stop: scoring needs the live ICP |
 | Your CRM | skip customers and open deals | say the check was skipped and mark rows "CRM unchecked" |
-| Clay | Enrich Person, and for email Work Email and Campaigns | offer headline-only scoring, clearly marked |
+| Clay CLI (`clay`, signed in) | Enrich Person, and for email Work Email, Enrich Company and Campaigns, as routines | offer headline-only scoring, clearly marked |
 | Google Drive and Sheets | the weekly file | CSV files in the run folder, and say so |
 | Slack or email | the pause notes | the chat says the same |
 
@@ -15,7 +15,7 @@
 
 1. **Creators.** For each one: name, profile link, one line on why their audience is your buyer. Check them against your competitors page first: a creator who sells what you sell is not added. Recommend 8 to 15 creators to start. Save them in `settings.md` with the date of the check.
 2. **Drive folder.** One private folder for every weekly file and nothing else. Find a folder named as in settings, or create it after a yes. Save its id in `settings.md`.
-3. **Clay prices.** Read the credit price of Enrich Person, Work Email and Enrich Company from your workspace (`clay routines list`, then `clay routines get <id>`, field `estimatedCreditCost.perRun`). Save them in `settings.md`. Without them, forecasts show lookups, not credits.
+3. **Clay prices.** Read the credit price of Enrich Person, Work Email and Enrich Company from your workspace (`clay routines list`, then `clay routines get <id>`, field `estimatedCreditCost.perRun`). The same output has `estimatedCreditCost.actionExecution`, the action credits per run, billed from a separate balance. Save both, and the routine ids, in `settings.md`. Without them, forecasts show lookups, not credits.
 4. **Apify prices and caps.** Check the actor names and the price per result in Apify. Confirm `max_usd_posts` and `max_usd_month`.
 
 ## Actor inputs

@@ -4,7 +4,7 @@ Start from your own wording and change only the facts. Keep your sentences, pers
 
 ## The template
 
-The pattern: a short opener that names the second decision maker, what you do for companies like theirs, one line of proof, one easy ask. In Clay tokens, `[First name]`, `[Company]` and `[Opener]` below are lead fields.
+The pattern: a short opener that names the second decision maker, what you do for companies like theirs, one line of proof, one easy ask. In Clay tokens, `[First name]`, `[Company]` and `[Opener]` below are lead fields. `[Company]` is this system's own company display name field from setup, not a company field another system made.
 
 **Subject (both versions):** `<Seed> + [Company]`
 

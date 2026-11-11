@@ -37,12 +37,14 @@ Actor names and prices change. Check them in Apify during setup.
 ## Clay
 
 - `enrich_function`: Enrich Person (input: the LinkedIn profile link)
-- `email_function`: Work Email
-- `company_function`: Enrich Company
+- `email_function`: Work Email (inputs: full name, company name, company domain, profile link, and the company LinkedIn page when there is one)
+- `company_function`: Enrich Company (input: the company domain)
+- Routine ids for the three: (added in setup; run through the Clay CLI, at most 100 items per run)
 - `never_use`: any "find contact details" bundle, any phone lookup
 - `credits_per_enrich`: (read from Clay in setup)
 - `credits_per_email`: (read from Clay in setup)
 - `credits_per_company`: (read from Clay in setup)
+- `action_credits_per_enrich`, `action_credits_per_email`, `action_credits_per_company`: (read from Clay in setup; a separate balance from data credits)
 - `max_people_per_run`: 60
 - `test_first`: 2
 
@@ -70,7 +72,7 @@ Agreed message versions, reused next week. Added by the outreach skills.
 
 - Clay people fields: campaign, company, post, cta, cta_date, cta_link (ids added in setup)
 - "Add to campaign list" routine id: (added in setup)
-- Routine inputs: email, first_name, last_name, full_name, linkedin_url, title, company, company_domain, company_linkedin, campaign, post, cta, cta_date, cta_link. Required: email, campaign, company_domain. It adds the company by domain first, then the person, linked to that company.
+- Routine inputs: email, first_name, last_name, full_name, linkedin_url, title, company, company_domain, company_linkedin, campaign, post, cta, cta_date, cta_link, and the company record: company_website, company_city, company_state, company_country, company_industry, company_headcount, company_founded, company_description, company_revenue, company_logo_url. Required: email, campaign, company_domain. It adds the company by domain first with its full record (from Enrich Company), then the person, linked to that company. Items are built by the rule in `creator-signals-email/references/campaign.md`.
 - Past campaigns and their one-off lists:
 
 | Campaign | List | Run | People | Status |

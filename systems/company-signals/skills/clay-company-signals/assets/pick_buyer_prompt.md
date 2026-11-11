@@ -1,6 +1,6 @@
 # Pick buyer prompt (agent node "Pick buyer")
 
-Fill the `<...>` parts from the user's ICP card: who signs, in the order the user would want to email them. Show it to the user, then paste it as the node's `agentPrompt`. Inputs: `company_name`, `domain`, `icp_card`, `job_title`, `people` (the whole result of "Find signers"). Outputs: `found` (boolean), `full_name`, `title`, `linkedin_url`, `reason`.
+Fill the `<...>` parts from the user's ICP card: who signs, in the order the user would want to email them. Show it to the user, then paste it as the node's `agentPrompt`. Inputs: `company_name`, `domain`, `icp_card`, `job_title`, `people` (the whole result of "Find signers"). Outputs: `found` (boolean), `full_name`, `title`, `linkedin_url`, `reason`. Use the intermediate model of the family, not the smallest: quality first.
 
 Test it twice: once with the real list, and once with the top group removed, to check it falls back to the next group and not to the closest match.
 

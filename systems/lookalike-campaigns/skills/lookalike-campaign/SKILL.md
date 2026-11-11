@@ -2,14 +2,14 @@
 name: lookalike-campaign
 description: "{{YOUR_NAME}}'s lookalike campaign for {{OFFER}}: picks one best customer as the seed, finds companies that would recognise that customer until 100 have a work email (same service, same kind of buyer, similar size, the seed's home market), checks them against the CRM and customers, finds the main decision maker plus a second one to name, looks up work emails, and builds a draft Clay campaign with an A/B test whose copy uses the seed as proof. Also reviews a running campaign and expands it with the next 100 when it works. Use for \"lookalike campaign\", \"lookalikes of <customer>\", \"find companies like <customer> and email them\", \"campaign using <customer> as proof\", \"how is the lookalike campaign doing\", \"expand the lookalike campaign\". Not for signal-based outreach (clay-company-signals) or creator comment lists (linkedin-creator-signals), and it never launches or sends a campaign."
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Lookalike campaign
 
 One seed customer, 100 companies for whom that customer means something, one draft Clay campaign that uses the seed as proof. You launch it in Clay yourself.
 
-**The target is {{TARGET_COMPANIES}} companies with a Clay-found work email**, not that many candidates. Only about 1 in 4 search results passes the bar, and some kept companies have no leader in Clay or no email. Keep searching until the target is reached. Credits are worth spending for quality: forecast each paid step and ask once.
+**The target is {{TARGET_COMPANIES}} companies with a Clay-found work email**, not that many candidates. Only about 1 in 4 search results passes the bar, and some kept companies have no leader in Clay or no email. Keep searching until the target is reached. Credits are worth spending for quality: forecast each paid step (count times price, plus the action credits Clay also bills) and ask once per batch. Every new batch after going back to the search is a new forecast and a new yes.
 
 **The bar is recognition, not firmographics.** A lookalike would read the seed's name and think "that's a company like us, and they rate this". Same service, same kind of buyer, similar size, and the seed's home market (or a public reason to know the seed there).
 
@@ -42,11 +42,11 @@ Suggest 2 or 3 seeds from your best customers whose logo you may show, with one 
 
 ### 2. Pause: the search strategy
 
-Start with Clay's **Find company lookalikes**, seeded with the seed (and, once found, its best confirmed fits) and steered with countries, sizes and description keywords, per `references/seed-and-search.md`. It charges per company returned: forecast it, show a batch of 10 with a one-line fit read each, and ask. Then fill the gaps with what fits this seed: companies searches, narrower searches when a broad one buries the fits, competitor lookups, a named list of the seed's best-known peers, Enrich Company to judge the unsure ones. Spend credits where they buy quality: show the plan with a credit forecast and adjust until you say it looks right. Then pull, read every description, and mark each company keep, check or drop with a reason. Expect to drop most results: plan about 4 candidates per company wanted. Watch the quota and the per-search cap. Never start extra searches to get round a cap: report it.
+Start with Clay's **Find company lookalikes**, seeded with the seed (and, once found, its best confirmed fits) and steered with countries, sizes and description keywords, per `references/seed-and-search.md`. It charges per company returned: forecast it, show a batch of 10 with a one-line fit read each, and ask. Then fill the gaps with what fits this seed: companies searches, narrower searches when a broad one buries the fits, competitor lookups, a named list of the seed's best-known peers, Enrich Company to judge the unsure ones. Spend credits where they buy quality: show the plan with a credit forecast and adjust until you say it looks right. Then pull, give each company its recognition points from `seed.json`, read every description, and mark each company keep, check or drop with a reason. Expect to drop most results: plan about 4 candidates per company wanted. Watch the quota and the per-search cap. Never start extra searches to get round a cap: report it.
 
 ### 3. Pause: credits for full company records
 
-Forecast Enrich Company for every keep and check company, from the price in settings, say the total, and ask once. Test 2 first. It fills website, LinkedIn page, exact headcount, founded, HQ city, state and country, industry, revenue, description and logo. Drop companies under `min_staff`. Show keep and check with a reason each and the recognition score, and let you decide the check ones.
+Forecast Enrich Company for every keep and check company, from the price in settings, say the total, and ask once. Test 2 first. It fills website, LinkedIn page, exact headcount, founded, HQ city, state and country, industry, revenue, description and logo. Drop companies under `min_staff`, unless you say to keep one. A company with no headcount goes to check. Warn when Clay answered with a different company. Show keep and check with a reason each and the recognition points, and wait for your keep or drop on every check one: only kept companies go on to step 5.
 
 ### 4. Exclusions (free)
 
@@ -54,7 +54,7 @@ The search already skips every company in your Clay Audiences. Companies added a
 
 ### 5. Decision makers (search quota, then credits)
 
-One people search limited to the kept companies picks a main contact ({{BUYER_TITLES}}) and a second decision maker ({{SECOND_TITLES}}) per company, per `references/enrich-and-check.md`. Member, board, chapter, advisor, volunteer and assistant titles never count: check the picks. For kept companies with no leader, forecast Find People at Company from settings and ask. Report who has a second person (they get the "you or <second>" opener) and who has none.
+One people search limited to the kept companies not searched yet picks a main contact ({{BUYER_TITLES}}) and a second decision maker ({{SECOND_TITLES}}) per company, per `references/enrich-and-check.md`. Running it again keeps the contacts already found. Only the first part of a title counts ("CEO | Speaker" is a CEO). Member, board, chapter, advisor, volunteer, assistant, vice, chief of staff and partnership titles never count: check the picks. For kept companies with no leader, forecast Find People at Company from settings and ask. Report who has a second person (they get the "you or <second>" opener) and who has none.
 
 ### 6. Pause: the copy
 
@@ -62,7 +62,7 @@ Adapt the template in `references/copy.md` to this seed, keeping your wording. S
 
 ### 7. Pause: work emails
 
-Forecast Work Email (main contacts only) and ask. Only people with a Clay-found email go on the list. An email at the company's own other domain is fine; one at another business drops the company. Then count companies with an email against the target. Below it, go back to step 2 and change the strategy before building.
+Forecast Work Email (main contacts only) and ask. Only people with a Clay-found email go on the list. An email at the company's own other domain is fine; one at another business drops the company. Then count companies with an email against the target. Below it, go back to step 2 and change the strategy before building. Companies dropped so far stay dropped.
 
 ### 8. Pause: build in Clay
 

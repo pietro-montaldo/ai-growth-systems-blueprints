@@ -13,12 +13,22 @@ One watchlist per copy of this file. The skill writes each Clay id here as soon 
 - **Mode:** list (nobody is emailed). Changes to campaign only in step 7, on your word.
 - **Skip a company for:** 90 days after someone there was added
 - **Hit alerts go to:** {{NOTIFY}}
+- **AI model for the two AI steps:** the intermediate model of the family (picked while building)
+
+## Prices (read from Clay in setup)
+
+- Enrich Company, per company added: (read from Clay in setup; data and action credits)
+- Buyer workflow, per hit that reaches the save step: (read from Clay after the first runs; data and action credits)
+- Per-hit spend agreed before publishing: (date of your yes)
 
 ## Clay ids (filled while building)
+
+Your own ids live here and nowhere else.
 
 | Piece | Id | Created |
 | --- | --- | --- |
 | Watch field on companies | | |
+| "Why fit" and "source" fields on companies | | |
 | Watchlist segment | | |
 | "Add to watchlist" workflow | | |
 | Signal 1 | | |

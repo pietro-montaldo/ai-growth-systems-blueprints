@@ -2,7 +2,7 @@
 name: clay-company-signals
 description: "{{YOUR_NAME}}'s company signals system in Clay, for {{OFFER_AND_CARD}}. Builds and runs it with you: pick one of your best customers, find lookalike companies, put them on a watchlist, watch them for buying signals (job posts, new hires, news, research intent) that match the triggers in your GTM context, and when a signal fires, find one person who can sign, find their work email, and add them to a buyer list or a Clay campaign. Recommends 100 companies to start. Asks before every write and every step that spends Clay credits. Use for \"set up Clay signals\", \"monitor a list of companies for signals\", \"build a lookalike watchlist\", \"alert me when target accounts hire or post jobs\", \"signal-based outbound in Clay\", \"enrol people when a signal fires\", \"add companies to my signals watchlist\". Not for one-off lead lists, not for website visitor tracking, and it never launches a campaign or sends an email itself."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Clay company signals
@@ -20,7 +20,7 @@ You end up with a system that runs by itself in your Clay workspace. A watchlist
 - `references/workflow.md`: the buyer workflow, node by node, and how to test it.
 - `references/campaign.md`: the email copy, the workflow-type campaign, and the order for going live.
 - `references/gotchas.md`: things Clay does that are easy to get wrong. Read it before building.
-- `assets/read_signal.py`, `assets/email_lines.py`: code for the two Clay code steps.
+- `assets/read_signal.py`, `assets/email_lines.py`: code for the two code steps in the buyer workflow. `assets/pick_headquarters.py`: the code step in the add-to-watchlist workflow.
 - `settings.md`: this watchlist's choices and the Clay ids of everything built
 - `assets/qualify_prompt.md`, `assets/pick_buyer_prompt.md`: prompts for the two AI steps. Fill them from your GTM context.
 
@@ -54,7 +54,7 @@ Follow `references/lookalikes.md`. Draft the search from the seed company and th
 
 ### 3. Pause: create the watchlist in Clay
 
-Follow `references/watchlist.md`. List what will be created (one company field, one segment, one small workflow) and how many workflow runs adding the companies uses. After a yes, build it, add the companies, and show the segment count against the CSV.
+Follow `references/watchlist.md`. List what will be created (the company fields, one segment, one small workflow), how many workflow runs adding the companies uses, and the Enrich Company cost (count times the price in settings, data and action credits). After a yes, build it, add the companies with their full record, and show the segment count against the CSV.
 
 ### 4. Pause: create the signals
 
@@ -62,11 +62,11 @@ Follow `references/signals.md`. Show each signal's settings in plain words, the 
 
 ### 5. Pause: build and test the buyer workflow
 
-Follow `references/workflow.md`. Fill `assets/qualify_prompt.md` and `assets/pick_buyer_prompt.md` from the ICP card and show both. Build the workflow as a draft in list mode, then test it once on a real or sample hit. Quote the cost first (about 3 to 5 credits). Show what each step did and who was picked. Fix and retest until the pick is a real signer.
+Follow `references/workflow.md`. Fill `assets/qualify_prompt.md` and `assets/pick_buyer_prompt.md` from the ICP card and show both. Build the workflow as a draft in list mode, then test it once on a real or sample hit. Quote the cost first (data and action credits for a full run, `references/workflow.md`). Show what each step did and who was picked. Fix and retest until the pick is a real signer.
 
 ### 6. Pause: you publish it in list mode
 
-Give the workflow link and ask you to press **Publish** in Clay. In list mode nobody is emailed: every qualified signal from then on adds one person to the buyer list. Then check the published version with the CLI and show where the list lives.
+Once live, the workflow spends credits on every hit, on its own, with no budget cap (`references/workflow.md`, "Cost per hit"). First say that per-hit cost and the expected hits a month, and ask once. Record your yes in `settings.md`. Then give the workflow link and ask you to press **Publish** in Clay. In list mode nobody is emailed: every qualified signal from then on adds one person to the buyer list. Then check the published version with the CLI and show where the list lives. A published version is frozen: later edits wait in the draft until you publish again, and publishing ships everything in the draft.
 
 ### 7. Pause: emailing, only when you ask
 
@@ -75,7 +75,9 @@ Follow `references/campaign.md`. Write the copy from your own wording, show 2 ve
 ## Rules
 
 - Never send, launch, resume or publish. You press Publish, Launch and Resume in Clay yourself.
-- Every Clay write is listed first and waits for a yes. Every credit-spending step quotes the count and the cost first.
+- Every Clay write is listed first and waits for a yes. Every credit-spending step quotes the count and the cost first, in data and action credits. Before a search pull, say the count and the search quota left.
+- Every company written to Clay carries its full record (Enrich Company). Every person is linked to their company record.
+- AI steps use the intermediate model, not the cheapest: quality first.
 - Signals are created paused and read back before they run.
 - One person per company, and a company is skipped for 90 days after someone there was added.
 - Pick only people who can sign. If nobody fits, add nobody.
