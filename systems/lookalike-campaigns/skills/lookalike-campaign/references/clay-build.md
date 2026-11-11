@@ -8,9 +8,9 @@ Before building, read `$RUN` and `clay campaigns list`. A build can already have
 
 Skip what settings already has an id for. Ask before creating each piece.
 
-- **People fields** (text): campaign tag, company display name, opener, seed, second contact, second contact title, and the company record: domain, website, LinkedIn page, city, state, country, industry, headcount, founded, description. If creator signals' email setup already made a campaign tag field, reuse it, so one campaign tag per person holds across systems.
+- **People fields** (text): campaign tag, company display name, opener, seed, second contact, second contact title, and the company record: domain, website, LinkedIn page, city, state, country, industry, headcount, founded, description, revenue, logo. If creator signals' email setup already made a campaign tag field, reuse it, so one campaign tag per person holds across systems.
 - **"Lookalikes: add people to list" workflow and routine:** a manual trigger with email, first name, last name, full name, LinkedIn link, title, campaign, opener, company, company_domain, the other company record fields, seed, second contact and second contact title. Required: email, campaign, company_domain. Two steps:
-  1. **Upsert company:** add or update a company record, matching on `company_domain`. Write name, LinkedIn page, city, state, country, industry and headcount. Skip empty values.
+  1. **Upsert company:** add or update a company record, matching on `company_domain`, with the full record: name, LinkedIn page, website, city, state, country, industry, headcount, founded, revenue, description and logo. Skip empty values. Then the company is complete even before the company routine runs.
   2. **Upsert person**, after step 1: add or update a people record by email and LinkedIn link, write the fields above, and **link the person to the company from step 1**: add a step input that reads step 1's result record id (`$.result.entityId`) and map it to the person's company association (`associations|accountId`).
 
   A trigger can have only one outgoing step: wire step 1 after the trigger and step 2 after step 1. `clay workflows graph validate` should show no warnings. Test once on your own record, publish after a yes, create the routine.
@@ -20,7 +20,7 @@ Skip what settings already has an id for. Ask before creating each piece.
 
 ## 1. People list
 
-Run the people routine with one item per main contact: the campaign name as the tag, company display name, opener, seed, second contact, and the full company record from Enrich Company. `company_domain` is required; enrich any company with no website or city first.
+Run the people routine with one item per main contact (files of up to 100 items; split above that and run one at a time): the campaign name as the tag, company display name, opener, seed, second contact, and the full company record from Enrich Company. `company_domain` is required; enrich any company with no website or city first.
 
 The link is what fills the person's **Company** column in Clay. Writing the company name on the person does not: a matching email domain or name never creates the link.
 

@@ -13,7 +13,7 @@
 ## Fit
 
 - `target_companies`: {{TARGET_COMPANIES}} (companies with a Clay-found work email, not candidates; keep searching until reached)
-- `min_staff`: {{MIN_STAFF}} (checked on Enrich Company's exact headcount; under it drops)
+- `min_staff`: {{MIN_STAFF}} (checked on Enrich Company's exact headcount; under it drops unless you keep it; no headcount goes to check)
 - `max_staff`: 250 (over it is judged by hand: communities and networks often count members as staff)
 - `keep_recognition`: 4 (4 or 5 is kept; below is "check", you decide)
 - `candidates_per_company`: 4 (plan about 4 companies searched per company that ends with an email)
@@ -27,9 +27,10 @@
 - `enrich_person`: Enrich Person, `credits_each`: (read from Clay in setup; people-first flow only)
 - `find_lookalikes`: Find company lookalikes, the first source in every run, `credits_each`: (read from Clay in setup; per company returned, plus a little per call)
 - `competitors`: competitor lookups, `credits_each`: (read from Clay in setup; per lookup)
-- People fields: campaign tag, company display name, opener, seed, second contact, second contact title, and the company record: domain, website, LinkedIn page, city, state, country, industry, headcount, founded, description (ids added in setup)
+- Action credits per run of each of the above: (read from Clay in setup; a separate balance, quoted in every forecast)
+- People fields: campaign tag, company display name, opener, seed, second contact, second contact title, and the company record: domain, website, LinkedIn page, city, state, country, industry, headcount, founded, description, revenue, logo (ids added in setup)
 - Company fields: list tag, ICP fit, seed, main contact, second contact, website, description, founded (ids added in setup)
-- "Lookalikes: add people to list" routine id: (added in setup). Adds the company by domain first, then the person, linked to that company. `company_domain` is required.
+- "Lookalikes: add people to list" routine id: (added in setup). Adds the company by domain first with its full record, then the person, linked to that company. `company_domain` is required.
 - "Lookalikes: add companies to list" routine id: (added in setup)
 
 ## Copy

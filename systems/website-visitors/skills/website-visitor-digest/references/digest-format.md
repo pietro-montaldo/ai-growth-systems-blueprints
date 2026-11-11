@@ -11,6 +11,7 @@ CAME BACK: CONTACT THESE FIRST
 • Low-confidence match: visit from <city, country>   (only when flagged)
 • This time: <sessions> session(s), <seconds>s engaged; pages: <pages>; came from: <sources or "direct">
 • Fit: <size>, <industry>, <country> · score <score>
+• Check: <tool> scored this <tier> with ICP version <version>; here it is <tier>   (only when they differ)
 • LinkedIn: <connections and engagers there, with titles, or "nobody you know there">
 • Next step: <one line: who to contact and the angle for their offer>
 
@@ -19,7 +20,8 @@ CAME BACK: CONTACT THESE FIRST
 
 EVERYONE ELSE   (one line per offer, no LinkedIn)
 <Offer> fits (<n>): <Company (card, size, country, source)>, ...
-Not a fit or unknown (<n>): <Company (reason)>, ...
+Not a fit (<n>): <Company (reason)>, ...
+No company data, look these up (<n>): <Company (domain)>, ...   (Unknown: no headcount found)
 Patterns: <1 or 2 lines: where traffic came from, countries, which offers are pulling>
 
 LinkedIn reads today: <total>/<cap>. Nothing was sent.

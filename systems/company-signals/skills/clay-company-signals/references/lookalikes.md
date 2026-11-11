@@ -36,7 +36,9 @@ Use `industry` for verticals, not description keywords. Keep it to what the ICP 
 
 ## 3. Sample, then adjust
 
-Create the search and pull 10. Show them as a short table: name, website, industry, size, country, one line on fit. Ask what's off. Typical fixes: too many of the user's competitors (exclude their industry or add a `not products_and_services is_similar_to`), too big or small (size buckets), wrong country.
+Before the first sample, run the search once with `--limit 1` (it uses 1 result) and read the total match count and `periodQuota` (limit, used, remaining). Say: "This search finds about <count> companies. A sample of 10 uses 10 of the <remaining> results left this period (resets <date>). Go ahead?" Wait for a yes.
+
+Then create the search and pull 10. Show them as a short table: name, website, industry, size, country, one line on fit. Ask what's off. Typical fixes: too many of the user's competitors (exclude their industry or add a `not products_and_services is_similar_to`), too big or small (size buckets), wrong country.
 
 Repeat until the user says the sample looks right. Each sample pull counts against the search quota.
 
@@ -53,7 +55,7 @@ Put company domains into one `clay.exclude_company_identifiers((...))` call (up 
 
 ## 5. Pull the list
 
-About half of the search results survive a fit check. To end with N companies, pull about N × 1.5. Pull in pages of up to 50 (`run <searchId> --limit 50`, repeat while `hasMore`). Watch `periodQuota` after each page.
+About half of the search results survive a fit check. To end with N companies, pull about N × 1.5. Before the pull, read `periodQuota` again and say the count and what is left: "Pulling about <N × 1.5> companies uses that many of the <remaining> results left this period (resets <date>), leaving <rest>. Go ahead?" Wait for a yes. If the pull would leave under 15% of the limit, say so plainly. Then pull in pages of up to 50 (`run <searchId> --limit 50`, repeat while `hasMore`) and watch `periodQuota` after each page. Stop at the agreed count.
 
 ## 6. Fit check and save
 

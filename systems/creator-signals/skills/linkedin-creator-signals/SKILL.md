@@ -2,7 +2,7 @@
 name: linkedin-creator-signals
 description: "{{YOUR_NAME}}'s weekly LinkedIn creator signals, part 1 of 3: finds and qualifies buyers for {{OFFERS_IN_SCOPE}} in the comments of a saved list of non-competing creators. Scrapes this week's posts with Apify, keeps only posts about something you sell, forecasts and asks before scraping comments, drops empty, keyword and AI-written comments and clear non-fits, forecasts and asks before Clay enrichment, scores people against the live ICP into this week's Google Sheet, then asks whether the list goes to LinkedIn or email. Use for \"run creator signals\", \"LinkedIn signals this week\", \"approve the comment scrape\", \"approve the Clay enrichment\", \"add a creator to the signals list\", \"who commented on my creators' posts\". Not for companies that visited your site (use website-visitor-digest), not for one post outside the saved list, and it never sends anything."
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # LinkedIn creator signals (part 1: find and qualify)
@@ -51,11 +51,11 @@ If you approve several steps at once ("go ahead with comments and Clay up to 40"
 
 **5. Screen.** One row per person; their best comment decides. Drop anyone already in {{KNOWN_PEOPLE_SOURCES}} (search by LinkedIn link, in batches), anyone in `$STATE/seen.csv` from the last 90 days, and the creator. Then read every comment and judge it per `references/screening.md`. If you have a do-not-contact list, run its check on the people kept.
 
-**6. Enrichment forecast.** People kept × your Enrich Person price. Fill the "People" tab with everyone kept and a summary: creators, posts, comments, dropped by reason, people to enrich, Clay forecast, Apify spent. Set `stage: pause-2`.
+**6. Enrichment forecast.** People kept × your Enrich Person price, plus the action credits Clay also bills. Fill the "People" tab with everyone kept and a summary: creators, posts, comments, dropped by reason, people to enrich, Clay forecast, Apify spent. Set `stage: pause-2`.
 
 **Pause 2.** Same note, ending "Reply 'approve the Clay enrichment'. Set Status to skip for anyone you don't want enriched." Stop.
 
-**7. Enrich.** Drop anyone set to skip. First run ever: 2 people, check the fields, then the rest. Run Clay "Enrich Person" on the profile links. Map results by LinkedIn link, never by position, and never write "not found" while a lookup is still running. Keep company, title, role start date, size, industry, location, summary, and every current role with its company website. When Clay shows a side gig or a platform as the job, fix it from the headline and flag it. Add everyone to `$STATE/seen.csv`. If Clay fails, stop and offer headline-only scoring.
+**7. Enrich.** Drop anyone set to skip. First run ever: 2 people, check the fields, then the rest. Run Clay "Enrich Person" through the Clay CLI routine (not a connector): an items file with one item per person (id = LinkedIn slug, input = profile link), at most 100 per file, one file at a time. Wait for the run and read every page of results. Map results by item id, never by position, and never write "not found" for an item that is not complete. Keep company, title, role start date, size, industry, location, summary, and every current role with its company website. When Clay shows a side gig or a platform as the job, fix it from the headline and flag it. Add everyone to `$STATE/seen.csv`. If Clay fails, stop and offer headline-only scoring.
 
 **8. Score** per `references/scoring.md`: card, fit 1 to 5, Why, Interests.
 
@@ -66,6 +66,7 @@ If you approve several steps at once ("go ahead with comments and Clay up to 40"
 ## Rules
 
 - No Apify or Clay call without a forecast and a yes in this session, except the posts scrape under its cap. Keep the month's spend in `$STATE/spend-YYYY-MM.json` and stop at the caps in `settings.md`.
+- Clay forecasts quote both balances: data credits and action credits (about 1 per routine run, more for Work Email). Read both from `clay credits balance` before and after each paid step.
 - Clay "Enrich Person" for qualification only. Work emails belong to the email skill. Never a phone lookup, never a "find contact details" bundle.
 - Never use a tool that reads or acts through your own LinkedIn account.
 - Never send messages, connection requests, emails, comments or reactions.

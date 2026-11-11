@@ -46,6 +46,8 @@ There is no CLI command that prices a signal. Use the price Clay shows: after cr
 
 Treat these as a rough guide. Read the real number in Data hub and say it before resuming.
 
+**The workflow spends too.** Each hit the signals find starts one run of the buyer workflow once it is published, and that run spends on its own, with no budget cap (`workflow.md`, "Cost per hit"). So quote both together: signal checks per month, plus the expected hits times the per-hit cost. Before publishing any workflow that spends per hit, state that cost and ask once.
+
 ## Create, read back, resume
 
 1. `clay signals list` first. If a signal of the same type already watches the same companies, reuse it instead.

@@ -26,6 +26,15 @@ A page counts as high intent when its path contains one of these words (the home
 
 {{HIGH_INTENT_PAGES}}
 
+## Scoring in your visitor tool (optional)
+
+Only if your visitor tool enriches and scores companies itself (`references/scoring.md`, section 4).
+
+- `icp_version`: (added in setup; bump only when the scoring changes)
+- `unknown_retry_days`: 7 (one retry for companies with no headcount, never a second)
+- `enrich_company_price`: (read from Clay in setup; spent on every new company, on its own)
+- Fields for the stored tier, ICP version and "enrich attempted" date: (ids added in setup)
+
 ## LinkedIn (read-only)
 
 - `linkedin.tool`: {{LINKEDIN_TOOL}}

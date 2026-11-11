@@ -16,6 +16,9 @@ Read before step 2. Add your own after each run.
 - **The customer and CRM check can return nothing because it's broken.** Test it on a known customer first.
 - **Empty ICP fields look like "not a fit" in Clay.** Write the fit.
 - **The decision maker search returns noise:** chapter volunteers, board members, members, assistants, a membership tier written as a job. Filter those titles and check every pick.
+- **Titles carry extras.** "CEO | Speaker" is a CEO; judge only the first part. "Head of Partnerships" and "Chief of Staff" look like leaders and aren't.
+- **Short employer names match everything.** A blank or 2 to 3 letter name never matches a company.
+- **Re-running a step can undo your work.** Re-running the people search keeps the contacts already found, and a dropped company stays dropped when the list is rebuilt.
 - **Employer names on profiles differ from Clay's company names.** Map the unmatched ones to their domain by hand.
 - **Work Email can return an address at another domain.** Fine for the company's own other domain. An address at another business (the founder's other company) drops the company.
 - **A person carries one campaign tag.** Tagging moves them off another list and pauses them there.

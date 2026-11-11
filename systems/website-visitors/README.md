@@ -28,7 +28,7 @@ visitor tool  →  companies and sessions  →  ICP fit (from your live ICP)  �
 
 ## Costs
 
-The digest itself spends nothing: it reads what your visitor tool already collected. Your visitor tool and any enrichment inside it cost what they cost there. LinkedIn reads are free but capped (see `settings.md`).
+The digest itself spends nothing: it reads what your visitor tool already collected. Your visitor tool and any enrichment inside it cost what they cost there. If you set your tool to enrich and score each new company (a Clay workflow, for example), that spends credits on every new company by itself, with no budget: the skill states the cost per company and asks once before you publish it. LinkedIn reads are free but capped (see `settings.md`).
 
 ## What you decide
 
@@ -48,5 +48,5 @@ The digest itself spends nothing: it reads what your visitor tool already collec
 ## Adapting it
 
 - Different layers (for example one per offer): change "Three layers" in `SKILL.md` and the layout in `references/digest-format.md`.
-- Score inside your visitor tool instead (a Clay formula or AI column, for example): keep `references/scoring.md` as the rules and point step 2 at the column.
+- Score inside your visitor tool instead (a Clay formula, workflow or AI column, for example): keep `references/scoring.md` as the rules and point step 2 at the column. Section 4 there covers the full company record, the one retry for Unknown companies and the cost.
 - Weekly instead of daily: change the schedule and set `lookback_hours` to 168.

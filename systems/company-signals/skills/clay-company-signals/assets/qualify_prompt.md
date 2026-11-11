@@ -1,6 +1,6 @@
 # Qualify prompt (agent node "Qualify signal")
 
-Fill the `<...>` parts from the user's ICP card, show the result to the user, then paste it as the node's `agentPrompt`. Keep the `{{...}}` variables: they are the node's inputs, wired from "Read company and signal". Outputs: `qualified` (boolean) and `reason` (string). Start with the smallest model and move up only if the answers are wrong.
+Fill the `<...>` parts from the user's ICP card, show the result to the user, then paste it as the node's `agentPrompt`. Keep the `{{...}}` variables: they are the node's inputs, wired from "Read company and signal". Outputs: `qualified` (boolean) and `reason` (string). Use the intermediate model of the family (not the smallest and not the top one): quality first. Move down only if the user asks to cut cost and a test shows the answers stay right.
 
 ```text
 You decide whether one company signal is a real reason to offer <the offer, in a few words> to {{company_name}} ({{domain}}).

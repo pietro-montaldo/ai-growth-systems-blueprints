@@ -6,20 +6,30 @@ Campaign name = list name = tag value: `Creator signals YYYY-MM-DD <short campai
 
 ## Adding people to the list
 
-One routine run per person, all in one call (up to 100 items):
+Build the items by this rule, never by hand. One item per person on the list, from three sources: the person (people.json), their Work Email result, and the Enrich Company result for their company. One routine run per person, all in one call (up to 100 items; above that, split into files of 100 and run one at a time):
 
 ```json
 {"items": [{"id": "<linkedin slug>", "inputs": {
   "email": "", "first_name": "", "last_name": "", "full_name": "", "linkedin_url": "",
-  "title": "", "company": "", "company_domain": "", "company_linkedin": "",
-  "campaign": "<campaign name>", "post": "Sam's post on reporting",
+  "title": "", "company": "", "campaign": "<campaign name>", "post": "Sam's post on reporting",
   "cta": "a session on automating client reports", "cta_date": "Nov 10",
-  "cta_link": "https://..."}}]}
+  "cta_link": "https://...",
+  "company_domain": "acme.example", "company_linkedin": "https://www.linkedin.com/company/acme",
+  "company_website": "https://www.acme.example", "company_city": "Leeds", "company_state": "England",
+  "company_country": "United Kingdom", "company_industry": "Marketing Services",
+  "company_headcount": 12, "company_founded": 2015, "company_description": "<up to 600 characters>",
+  "company_revenue": "1M-5M", "company_logo_url": "https://..."}}]}
 ```
 
-`company_domain` is required. Take it from the person's Work Email result (the company domain it used), and `company_linkedin` from their current role. The routine first adds or updates that company by domain, then links the person to it, so the person's Company column in Clay is filled. Someone with no company domain has no work email either, so they never reach this step.
+- `company_domain` is required. It is the company domain sent to Work Email, kept only when the email is at that domain. People with an email at another business go on the decide list instead.
+- `company_linkedin` comes from the person's current role, else from Enrich Company.
+- The `company_*` record comes from Enrich Company (SKILL.md step 2b). City and state come from the location marked headquarters, else the first one. Write the country as a full name ("United Kingdom", not "GB"). Headcount and founded are numbers.
+- Leave out empty values. The routine skips blanks, so running it again never wipes a field.
+- Before running, list anyone with no company record or no CTA fields, and any company where Enrich Company answered with another company. Fix those first.
 
-Poll the run until it is complete. Report any item that failed; don't retry it blindly. Then check the link: count the people whose campaign field equals the campaign name and who have no company (`count from people where <campaign field> = "<campaign name>" and not company.exists()`). It must be 0. The count lags about 10 seconds behind the routine. In email the CTA link is the full `https://` link so it is clickable everywhere. The routine updates by email and LinkedIn link, so running it again updates the same record.
+The routine first adds or updates that company by domain with the full record, then links the person to it, so the person's Company column in Clay is filled. Someone with no company domain has no work email either, so they never reach this step.
+
+Wait for the run to complete, and read every page of results. Report any item that failed; don't retry it blindly. Then check the link: count the people whose campaign field equals the campaign name and who have no company (`count from people where <campaign field> = "<campaign name>" and not company.exists()`). It must be 0. The count lags about 10 seconds behind the routine. In email the CTA link is the full `https://` link so it is clickable everywhere. The routine updates by email and LinkedIn link, so running it again updates the same record.
 
 ## The one-off list
 
