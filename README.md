@@ -1,6 +1,6 @@
 # AI growth systems blueprints
 
-Four growth systems from the AI Growth Systems Bootcamp, written as blueprints. They are not a plugin you install. Each one is a folder you read, then ask Claude to copy into your own setup and fill in for your business: your GTM context, your tools, your channels, your limits.
+Growth systems from the AI Growth Systems Bootcamp, written as blueprints. They are not a plugin you install. Each one is a folder you read, then ask Claude to copy into your own setup and fill in for your business: your GTM context, your tools, your channels, your limits.
 
 You end up with your own systems, in your own folder (and your own GitHub repo, if you publish them), that you can change whenever you like. Nothing here updates itself, and nothing is shared back.
 
@@ -9,6 +9,7 @@ You end up with your own systems, in your own folder (and your own GitHub repo, 
 | [Website visitors](systems/website-visitors/README.md) | Companies that visited your website, scored against your ICP, with any warm path you have on LinkedIn, in one short daily summary | Daily | A visitor identification tool, Slack or email |
 | [Creator signals](systems/creator-signals/README.md) | Buyers found in the comments of LinkedIn creators who speak to your audience, screened, enriched and scored, then sent to LinkedIn messages or a one-off email campaign | Weekly | Apify, Clay, Google Sheets |
 | [Company signals](systems/company-signals/README.md) | A watchlist of companies that look like your best customer, watched for buying signals, with one signer and their work email found when a signal fires | Runs by itself in Clay | Clay |
+| [Lookalike campaigns](systems/lookalike-campaigns/README.md) | 100 companies that would recognise one of your best customers, one decision maker each, and a draft Clay A/B campaign that uses that customer as proof, expanded when it works | Per campaign | Clay |
 | [Pipeline review](systems/pipeline-review/README.md) | Last week's inbound, new buyers and every open deal, with the sure CRM changes made and a numbered list of decisions for you | Weekly | Your email, your CRM, your booking tool |
 
 ## Before you copy a system
@@ -27,7 +28,7 @@ Claude follows [COPY-GUIDE.md](COPY-GUIDE.md). It reads the system's README, fin
 
 At the end it asks one simple question: **do you want to publish it on your GitHub?** On a yes, it adds the system to your own repo and marketplace and pushes it, so it's saved and installable on any computer. Last, it offers to schedule the system.
 
-You can copy one system or all four. Start with one.
+You can copy one system or all of them. Start with one.
 
 ## How each system folder is laid out
 
