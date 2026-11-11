@@ -58,7 +58,7 @@ From settings: the "with a second person" line when there is one, the solo line 
 
 ## Clay tokens
 
-Take the exact field ids and labels from `clay campaigns audience <campaign id>` after the list is attached. Tokens look like `{{lead:first_name|First name}}` and `{{lead:<field id>|Opener}}`. The signature can use `{{sender.senderFirstName}}`: previews show it raw, the test email fills it.
+Take the exact field ids and labels from `clay campaigns audience <campaign id>` after the list is attached. Tokens look like `{{lead:first_name|First name}}` and `{{lead:<field id>|Opener}}`. The company record fields on each person (city, industry, founded, description) can be tokens too, but only use a fact that reads true for every lead. The signature can use `{{sender.senderFirstName}}`: previews show it raw, the test email fills it.
 
 ## Spintax
 

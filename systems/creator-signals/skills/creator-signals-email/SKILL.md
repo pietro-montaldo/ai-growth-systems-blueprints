@@ -2,7 +2,7 @@
 name: creator-signals-email
 description: "{{YOUR_NAME}}'s LinkedIn creator signals, part 3 (email): turns this week's shortlist from linkedin-creator-signals into a one-off Clay email campaign, a single email or a sequence. Forecasts and asks before the Clay Work Email lookups, puts the people with an email on a Clay list for this campaign only, creates the campaign on it with the inboxes you pick, writes the copy from your template and agrees it with you, spam-checks it, previews it, sends you a test email on a yes, then hands over for you to press Launch in Clay. Use when you pick email for a creator signals list, or say \"set up the email campaign for this week's list\", \"Clay campaign for the creator leads\", \"sequence for the shortlist\". Not for LinkedIn messages (use creator-signals-linkedin), not for long-running campaigns, and it never launches or sends the campaign."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # LinkedIn creator signals (part 3: Clay email campaign)
@@ -36,7 +36,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:campaig
 
 **4. Basics, in one batch.** Single email or a sequence (how many follow-ups), which inboxes to send from (list the connected ones by address), and the sending window. Name the campaign per `references/campaign.md`.
 
-**5. One-off list.** Run the "add to campaign list" routine on the people with an email, tagged with the campaign name, then create the list filtered on that tag. Check its count matches.
+**5. One-off list.** Run the "add to campaign list" routine on the people with an email, tagged with the campaign name, with each person's company domain from the Work Email step. The routine adds the company first and links the person to it. Then create the list filtered on that tag. Check its count matches, and that no one on it is missing their company (`references/campaign.md`).
 
 **6. Campaign.** Create it as a draft, then one change per command: the list, the inboxes, the goal. Say each change in plain words.
 
@@ -53,6 +53,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:campaig
 - Never launch, resume or send the campaign, and never work around that through workflows, enrolment steps or other tools.
 - Test emails only to your own address, confirmed in this session, one at a time.
 - Only people with a Work Email from Clay go on the list. Never guess an address or a domain.
+- Every person written to Clay is linked to their company record.
 - No personal data in a campaign, list or field name.
 - Do-not-contact (optional): if you have the list, run check-do-not-contact on the people before step 5.
 

@@ -11,12 +11,15 @@ One routine run per person, all in one call (up to 100 items):
 ```json
 {"items": [{"id": "<linkedin slug>", "inputs": {
   "email": "", "first_name": "", "last_name": "", "full_name": "", "linkedin_url": "",
-  "title": "", "company": "", "campaign": "<campaign name>", "post": "Sam's post on reporting",
+  "title": "", "company": "", "company_domain": "", "company_linkedin": "",
+  "campaign": "<campaign name>", "post": "Sam's post on reporting",
   "cta": "a session on automating client reports", "cta_date": "Nov 10",
   "cta_link": "https://..."}}]}
 ```
 
-Poll the run until it is complete. Report any item that failed; don't retry it blindly. In email the CTA link is the full `https://` link so it is clickable everywhere. The routine updates by email and LinkedIn link, so running it again updates the same record.
+`company_domain` is required. Take it from the person's Work Email result (the company domain it used), and `company_linkedin` from their current role. The routine first adds or updates that company by domain, then links the person to it, so the person's Company column in Clay is filled. Someone with no company domain has no work email either, so they never reach this step.
+
+Poll the run until it is complete. Report any item that failed; don't retry it blindly. Then check the link: count the people whose campaign field equals the campaign name and who have no company (`count from people where <campaign field> = "<campaign name>" and not company.exists()`). It must be 0. The count lags about 10 seconds behind the routine. In email the CTA link is the full `https://` link so it is clickable everywhere. The routine updates by email and LinkedIn link, so running it again updates the same record.
 
 ## The one-off list
 
