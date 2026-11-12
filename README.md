@@ -7,7 +7,7 @@ You end up with your own systems, in your own folder (and your own GitHub repo, 
 | System | What it does | Runs | Main tools |
 | --- | --- | --- | --- |
 | [Website visitors](systems/website-visitors/README.md) | Companies that visited your website, scored against your ICP, with any warm path you have on LinkedIn, in one short daily summary | Daily | A visitor identification tool, Slack or email |
-| [Creator signals](systems/creator-signals/README.md) | Buyers found in the comments of LinkedIn creators who speak to your audience, screened, enriched and scored, then sent to LinkedIn messages or a one-off email campaign | Weekly | Apify, Clay, Google Sheets |
+| [Creator signals](systems/creator-signals/README.md) | Buyers found in the comments of LinkedIn creators who speak to your audience, screened, enriched and scored, then sent to LinkedIn messages or a one-off email campaign | Weekly | Apify, Clay, Google Sheets or Excel |
 | [Company signals](systems/company-signals/README.md) | A watchlist of companies that look like your best customer, watched for buying signals, with one signer and their work email found when a signal fires | Runs by itself in Clay | Clay |
 | [Lookalike campaigns](systems/lookalike-campaigns/README.md) | 100 companies with a work email that would recognise one of your best customers, one decision maker each, and a draft Clay A/B campaign that uses that customer as proof, expanded when it works | Per campaign | Clay |
 | [Pipeline review](systems/pipeline-review/README.md) | Last week's inbound, new buyers and every open deal, with the sure CRM changes made and a numbered list of decisions for you | Weekly | Your email, your CRM, your booking tool |

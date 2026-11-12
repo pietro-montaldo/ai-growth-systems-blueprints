@@ -24,7 +24,7 @@ Go through the README's "What you decide" table. Some placeholders are maps (sta
 - Otherwise add it to one list of questions.
 - When their tool is missing something the system needs (a column, a stage, a field), propose adding it as part of the questions. Add it only on a yes, and back up a file before changing it.
 
-Ask the questions once, in one message, in plain words. Recommend an answer for each when you can. Never ask where to save the copy: see step 4.
+Ask the questions once, in one message, in plain words. A placeholder the table marks **Asked first** opens the message, and is never filled from your own guess. Recommend an answer for each when you can. Never ask where to save the copy: see step 4.
 
 ## 3. Show the copy before saving
 

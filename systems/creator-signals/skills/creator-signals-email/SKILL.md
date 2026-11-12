@@ -2,7 +2,7 @@
 name: creator-signals-email
 description: "{{YOUR_NAME}}'s LinkedIn creator signals, part 3 (email): turns this week's shortlist from linkedin-creator-signals into a one-off Clay email campaign, a single email or a sequence. Forecasts and asks before the Clay Work Email lookups, puts the people with an email on a Clay list for this campaign only, creates the campaign on it with the inboxes you pick, writes the copy from your template and agrees it with you, spam-checks it, previews it, sends you a test email on a yes, then hands over for you to press Launch in Clay. Use when you pick email for a creator signals list, or say \"set up the email campaign for this week's list\", \"Clay campaign for the creator leads\", \"sequence for the shortlist\". Not for LinkedIn messages (use creator-signals-linkedin), not for long-running campaigns, and it never launches or sends the campaign."
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # LinkedIn creator signals (part 3: Clay email campaign)
@@ -22,7 +22,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:campaig
 ## Before starting
 
 - The run is at stage `scored` with channel `email`. If the channel is empty, ask and record it. If it is `linkedin`, stop: one list goes to one channel.
-- Read the People tab: every row with Status "shortlist" or "send". Apply your edits to `$RUN/people.json`.
+- The list is every person in `$RUN/people.json` with Status "shortlist" or "send", as you confirmed it at Pause 3. This path creates no file: the Clay list and campaign are the record.
 - If settings have no routine id or field ids under "Email", do `references/clay-setup.md` first.
 - Load your voice skill if installed.
 
@@ -48,7 +48,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:campaig
 
 **9. Test email.** Ask: "Send a test of the first email to <your address>?" Only after a clear yes, send one test. Ask you to check your inbox.
 
-**10. Hand-off.** Give the campaign link and say: review it in Clay and press Launch when ready. Update the sheet (Channel "email", Email, Campaign, Status "in campaign"), add the campaign and list to settings, and set the run's stage to `campaign-ready`.
+**10. Hand-off.** Give the campaign link and say: review it in Clay and press Launch when ready. Update `$RUN/people.json` (Channel "email", Email, Campaign, Status "in campaign"), add the campaign and list to settings, and set the run's stage to `campaign-ready`.
 
 ## Rules
 

@@ -31,4 +31,4 @@ Under 6 months in a role is a trigger on many cards: say so in Why. A founder a 
 
 ## Shortlist
 
-Fit 4 and 5 go to the channel you pick. Fit 3 stays in the sheet with Why, so you can promote someone by hand.
+Fit 4 and 5 go to the channel you pick. Fit 3 is listed on hold at Pause 3 with Why, so you can move someone up by number.
