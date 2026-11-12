@@ -7,17 +7,19 @@ Shared by all three creator signals skills. Change any value here.
 - **GTM context:** {{GTM_CONTEXT}}
 - **Offers in scope:** {{OFFERS_IN_SCOPE}}
 - **Known people (skip them):** {{KNOWN_PEOPLE_SOURCES}}
-- **Drive folder:** {{DRIVE_FOLDER}} (folder id: added in setup)
-- **Weekly file name:** "{{DRIVE_FOLDER}} YYYY-MM-DD"
+- **Outreach file:** {{OUTREACH_FILE}}, made only on the LinkedIn path
+- **Outreach folder:** {{DRIVE_FOLDER}} (folder id: added the first time you pick LinkedIn, if you use Google Drive)
+- **Outreach file name:** "{{DRIVE_FOLDER}} YYYY-MM-DD"
 - **Pause notes go to:** {{NOTIFY}}
 - **Weekly run:** {{RUN_DAY}}
 
 ## Creators
 
-One line each, added through the creators mode after a competitor check.
+You pick them. The first ones come from your answer when you copy the system; add more with the creators mode. Each one is checked against your competitors first.
 
 | Name | Profile link | Why they fit | Competitor check | Added |
 | --- | --- | --- | --- | --- |
+{{CREATORS}}
 
 ## Apify
 

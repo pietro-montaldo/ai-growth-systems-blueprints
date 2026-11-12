@@ -8,13 +8,13 @@
 | GTM context (Notion or repo) | ICP, competitors, messaging | stop: scoring needs the live ICP |
 | Your CRM | skip customers and open deals | say the check was skipped and mark rows "CRM unchecked" |
 | Clay CLI (`clay`, signed in) | Enrich Person, and for email Work Email, Enrich Company and Campaigns, as routines | offer headline-only scoring, clearly marked |
-| Google Drive and Sheets | the weekly file | CSV files in the run folder, and say so |
-| Slack or email | the pause notes | the chat says the same |
+| Google Drive and Sheets | the LinkedIn outreach file, only on the LinkedIn path | an Excel file in the run folder, sent to you |
+| Slack or email | the short "review waiting" note when the scheduled run finishes | the scheduled run's own session shows the review |
 
 ## One-time setup
 
-1. **Creators.** For each one: name, profile link, one line on why their audience is your buyer. Check them against your competitors page first: a creator who sells what you sell is not added. Recommend 8 to 15 creators to start. Save them in `settings.md` with the date of the check.
-2. **Drive folder.** One private folder for every weekly file and nothing else. Find a folder named as in settings, or create it after a yes. Save its id in `settings.md`.
+1. **Creators, asked first.** You pick the creators to track: this is the first question when you copy the system (`{{CREATORS}}`), and the creators mode adds more later. For each one: name, profile link, one line on why their audience is your buyer. Check each against your competitors page before saving: a creator who sells what you sell is not added, and you're told why. Recommend 8 to 15 creators to start. Save them in `settings.md` with the date of the check.
+2. **Outreach folder (LinkedIn path only).** Set it up the first time you pick LinkedIn, not before. With Google Drive connected: one private folder for the outreach files and nothing else. Find a folder named as in settings, or create it after a yes, and save its id in `settings.md`. Without Google: the Excel file goes in the run folder and is sent to you.
 3. **Clay prices.** Read the credit price of Enrich Person, Work Email and Enrich Company from your workspace (`clay routines list`, then `clay routines get <id>`, field `estimatedCreditCost.perRun`). The same output has `estimatedCreditCost.actionExecution`, the action credits per run, billed from a separate balance. Save both, and the routine ids, in `settings.md`. Without them, forecasts show lookups, not credits.
 4. **Apify prices and caps.** Check the actor names and the price per result in Apify. Confirm `max_usd_posts` and `max_usd_month`.
 
@@ -35,4 +35,4 @@ Actors change. If a field comes back empty for every row, look at one raw item a
 
 ## Schedule
 
-Offer a weekly scheduled task on {{RUN_DAY}} that runs this skill in posts mode and stops at Pause 1. It only scrapes posts under the cap, fills the sheet and sends the pause note. Comments, Clay and drafts always wait for a session you start. Show the prompt first.
+Offer a weekly scheduled task on {{RUN_DAY}} that runs this skill in posts mode and stops at Pause 1. It only scrapes posts under the cap, shows the Pause 1 review in its session and sends the short note. Comments, Clay and drafts always wait for a session you start. Show the prompt first.

@@ -19,7 +19,7 @@ The post's main idea is one of these, for readers who could buy {{OFFERS_IN_SCOP
 
 ## Unsure
 
-A general post on your theme with no clear link to an offer. Mark it unsure with reason "general". It is scraped with the kept posts but listed apart in the sheet, so you can switch it off.
+A general post on your theme with no clear link to an offer. Mark it unsure with reason "general". It is scraped with the kept posts but listed apart at Pause 1, so you can switch it off.
 
 ## Lead magnet posts
 
