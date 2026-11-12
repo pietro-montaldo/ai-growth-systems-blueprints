@@ -30,7 +30,7 @@
 - Action credits per run of each of the above: (read from Clay in setup; a separate balance, quoted in every forecast)
 - People fields: campaign tag, company display name, opener, seed, second contact, second contact title, and the company record: domain, website, LinkedIn page, city, state, country, industry, headcount, founded, description, revenue, logo (ids added in setup)
 - Company fields: list tag, ICP fit, seed, main contact, second contact, website, description, founded (ids added in setup)
-- "Lookalikes: add people to list" routine id: (added in setup). Adds the company by domain first with its full record, then the person, linked to that company. `company_domain` is required.
+- "Lookalikes: add people to list" routine id: (added in setup). Adds the company by domain first with its full record, then the person, linked to that company, with the person's own city, state, country, location and seniority (inputs `person_city`, `person_state`, `person_country`, `person_location`, `person_seniority`, mapped to the person's City, State, Country, Location and Seniority fields). `company_domain` is required.
 - "Lookalikes: add companies to list" routine id: (added in setup)
 
 ## Copy

@@ -76,7 +76,7 @@ Follow `references/campaign.md`. Write the copy from your own wording, show 2 ve
 
 - Never send, launch, resume or publish. You press Publish, Launch and Resume in Clay yourself.
 - Every Clay write is listed first and waits for a yes. Every credit-spending step quotes the count and the cost first, in data and action credits. Before a search pull, say the count and the search quota left.
-- Every company written to Clay carries its full record (Enrich Company). Every person is linked to their company record.
+- Every company written to Clay carries its full record (Enrich Company). Every person is linked to their company record and carries their own location and country from the row that found them (free).
 - AI steps use the intermediate model, not the cheapest: quality first.
 - Signals are created paused and read back before they run.
 - One person per company, and a company is skipped for 90 days after someone there was added.

@@ -55,7 +55,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:campaig
 - Never launch, resume or send the campaign, and never work around that through workflows, enrolment steps or other tools.
 - Test emails only to your own address, confirmed in this session, one at a time.
 - Only people with a Work Email from Clay go on the list. Never guess an address or a domain.
-- Every person written to Clay is linked to their company record, and every company carries its full record from Enrich Company.
+- Every person written to Clay is linked to their company record, and every company carries its full record from Enrich Company. Every person also carries their own location and country from the Enrich Person results the find stage already paid for (free); a country only when Clay gave one.
 - Someone whose work email is at another business is never linked to the original company.
 - No personal data in a campaign, list or field name.
 - Do-not-contact (optional): if you have the list, run check-do-not-contact on the people before step 5.

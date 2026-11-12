@@ -77,7 +77,7 @@ Give the campaign link, list counts, who had no email, credits used, and the exp
 - Never launch, resume or send a campaign. Test emails only to your own address, confirmed in this session, after a clear yes.
 - Every Clay write is listed first and waits for a yes. Every credit step quotes count times price first.
 - One email per company. The second decision maker is only named, never emailed.
-- Every person written to Clay is linked to their company record. Every company carries the full record from Enrich Company.
+- Every person written to Clay is linked to their company record. Every company carries the full record from Enrich Company. Every person also carries their own city, state, country and location, taken from the search and Find People results already in hand (free); a country only when it's certain, never guessed.
 - Never guess an email address or invent a fact about a company, a person or the seed.
 - Proof only within the permission recorded for the seed. A quote needs your confirmation that the person agreed to those exact words.
 - Never contact a customer, a company with an open deal, or anyone already on another of your lists.

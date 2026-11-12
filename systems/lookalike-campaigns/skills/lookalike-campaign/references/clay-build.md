@@ -32,6 +32,18 @@ Then check the link. This must return 0:
 count from people where <campaign tag field> = "<campaign name>" and not company.exists()
 ```
 
+Then check the person's own location. The routine writes it onto the person's City, State, Country
+and Location fields (not the company's): from the search result's location and Find People's country.
+List who has no country:
+
+```
+count from people where <campaign tag field> = "<campaign name>" and location_country is_null
+```
+
+Don't pay to fill them just to complete the table. Only if you'll use a person's own location
+(splitting sends by timezone, copy that names their city), run Enrich Person on that list before
+it launches, with a forecast and a yes first.
+
 ## 2. Company list, ICP scored
 
 Companies only show a fit in Clay once the ICP field is filled; empty looks like "not a fit". Score each company against the live ICP card in one line (card and tier), then run the company routine with tag, ICP fit, seed, main and second contact, and the full record: website, description, founded, city, state, country, logo, headcount, revenue. Create the company list, check the count, and read 2 records back. Say how many companies already existed.
