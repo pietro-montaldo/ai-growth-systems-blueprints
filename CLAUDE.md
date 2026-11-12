@@ -15,6 +15,7 @@ Answer from `systems/<system>/README.md`. Don't copy anything.
 ## When editing the blueprints themselves
 
 - Keep them anonymous: no real names, companies, prices, Notion, Clay, Slack or Drive ids, hardcoded `mcp__<id>` tool names, or local paths. Examples use made-up companies (Acme, Brightlane, Kito) and first names only.
+- Any step that writes people or companies to Clay keeps the records complete: the company upserted by domain with its full Enrich Company record, each person linked to it (the account link, not just the company name) and carrying their own city, state, country and location from data the system already has. After the write, check no one is unlinked and list who has no country. Never pay to fill fields nothing will use.
 - Every value that changes from one business to the next is a `{{PLACEHOLDER}}` in upper snake case, listed in that system's README "What you decide" table with where Claude finds it and a default when there is one.
 - Settings a person will tune go in the skill's `settings.md`, not in `SKILL.md`.
 - Students are non-technical. Plain language, short sentences, no em dashes or double dashes in prose. Frontmatter `description` is one quoted string: what it does, quoted trigger phrases, then "Not for X".

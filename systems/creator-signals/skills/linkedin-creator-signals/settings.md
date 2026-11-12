@@ -72,7 +72,7 @@ Agreed message versions, reused next week. Added by the outreach skills.
 
 - Clay people fields: campaign, company, post, cta, cta_date, cta_link (ids added in setup)
 - "Add to campaign list" routine id: (added in setup)
-- Routine inputs: email, first_name, last_name, full_name, linkedin_url, title, company, company_domain, company_linkedin, campaign, post, cta, cta_date, cta_link, and the company record: company_website, company_city, company_state, company_country, company_industry, company_headcount, company_founded, company_description, company_revenue, company_logo_url. Required: email, campaign, company_domain. It adds the company by domain first with its full record (from Enrich Company), then the person, linked to that company. Items are built by the rule in `creator-signals-email/references/campaign.md`.
+- Routine inputs: email, first_name, last_name, full_name, linkedin_url, title, company, company_domain, company_linkedin, campaign, post, cta, cta_date, cta_link, and the company record: company_website, company_city, company_state, company_country, company_industry, company_headcount, company_founded, company_description, company_revenue, company_logo_url, and the person's own person_city, person_state, person_country, person_location, person_seniority (onto the person's City, State, Country, Location and Seniority). Required: email, campaign, company_domain. It adds the company by domain first with its full record (from Enrich Company), then the person, linked to that company. Items are built by the rule in `creator-signals-email/references/campaign.md`.
 - Past campaigns and their one-off lists:
 
 | Campaign | List | Run | People | Status |

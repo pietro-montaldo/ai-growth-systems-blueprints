@@ -29,7 +29,7 @@ Build the items by this rule, never by hand. One item per person on the list, fr
 
 The routine first adds or updates that company by domain with the full record, then links the person to it, so the person's Company column in Clay is filled. Someone with no company domain has no work email either, so they never reach this step.
 
-Wait for the run to complete, and read every page of results. Report any item that failed; don't retry it blindly. Then check the link: count the people whose campaign field equals the campaign name and who have no company (`count from people where <campaign field> = "<campaign name>" and not company.exists()`). It must be 0. The count lags about 10 seconds behind the routine. In email the CTA link is the full `https://` link so it is clickable everywhere. The routine updates by email and LinkedIn link, so running it again updates the same record.
+Wait for the run to complete, and read every page of results. Report any item that failed; don't retry it blindly. Then check the link: count the people whose campaign field equals the campaign name and who have no company (`count from people where <campaign field> = "<campaign name>" and not company.exists()`). It must be 0. Then count who has no country of their own (`... and location_country is_null`) and list them; don't pay to fill them unless you'll use it. The counts lag about 10 seconds behind the routine. In email the CTA link is the full `https://` link so it is clickable everywhere. The routine updates by email and LinkedIn link, so running it again updates the same record.
 
 ## The one-off list
 

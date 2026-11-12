@@ -24,6 +24,7 @@ Read before step 2. Add your own after each run.
 - **A person carries one campaign tag.** Tagging moves them off another list and pauses them there.
 - **The spam check marks fixed sentences.** A fixed proof sentence can be worth the points.
 - **People are not linked to their companies unless the routine links them.** The Company column in Clay stays empty even with the company name written on the person. Upsert the company first, link the person to it, and check that no one on the list is unlinked.
+- **The company's location is not the person's.** Writing the company's city on the person leaves the person's own City, State and Country empty. Map the person's location from the search or Find People result onto the person's fields, in the same routine.
 - **Records are thin without Enrich Company.** The search gives a size bucket and a location string; website, city, exact headcount and founding year come from Enrich Company on every company.
 - **Broad searches bury the best fits.** A second round of narrower searches, split the way the seed's world divides, can find many more. Pick the split that fits the seed.
 - **Find company lookalikes follows Clay's industry.** It charges per result and matches on industry, topic and size, so a seed filed under the wrong industry gets the wrong kind of company back. It is still step one: read a batch of 10, then fix the seed set and keywords. Competitor lookups mostly confirm names you have.
