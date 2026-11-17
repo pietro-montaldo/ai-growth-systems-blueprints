@@ -41,9 +41,12 @@ The Clay systems in `systems/` are written for the Clay CLI, and that is the ver
 | System | Windows fallback (no Clay CLI) |
 | --- | --- |
 | Company signals | [systems-mcp/company-signals](systems-mcp/company-signals/README.md) |
+| Creator signals | [systems-mcp/creator-signals](systems-mcp/creator-signals/README.md) |
 | Lookalike campaigns | [systems-mcp/lookalike-campaigns](systems-mcp/lookalike-campaigns/README.md) |
 
 The Clay Agent is on Clay's Launch, Growth and Enterprise plans. Without it, the fallback walks you through those steps in Clay by hand.
+
+Website visitors needs no fallback: it reads your visitor tool through a connector or a CSV export. With Clay web intent on Windows without the CLI, use a CSV export of the table.
 
 ## How each system folder is laid out
 

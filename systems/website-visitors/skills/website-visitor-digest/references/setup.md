@@ -4,7 +4,7 @@
 
 | Tool | How the digest reads it |
 | --- | --- |
-| Clay web intent | The web intent table, through the Clay CLI or connector. Note the table id and the column ids for session, company, domain, pages and time in `settings.md`. |
+| Clay web intent | The web intent table, through the Clay CLI. Note the table id and the column ids for session, company, domain, pages and time in `settings.md`. The Clay connector can't read tables: on Windows without the Clay CLI, use a CSV export of the table, or Claude reads the new rows in the built-in browser of the Claude desktop app. |
 | RB2B, Dealfront, Warmly, Apollo, HubSpot | Their connector if you have one. Otherwise a daily or weekly CSV export into the exports folder. |
 | Anything else | A CSV export with at least: company name, domain, visit time, pages. Time on page and source are a bonus. |
 
