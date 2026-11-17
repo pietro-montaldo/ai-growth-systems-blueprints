@@ -2,9 +2,26 @@
 
 Claude follows this guide when someone asks to copy a system from this repo into their own setup. The blueprint stays untouched. The copy is theirs.
 
+## 0. Clay systems: the Clay CLI decides the version
+
+Do this first for any system that uses Clay, before reading anything else. Find out yourself, and ask only when you can't tell:
+
+- **Their computer:** Windows, Mac or Linux (from the session's environment).
+- **The Clay CLI:** does `clay whoami` run and show a workspace?
+
+Then:
+
+| Their setup | Version | What to do |
+| --- | --- | --- |
+| The Clay CLI works (any computer) | `systems/<system>/` | Use only this. Ignore `systems-mcp/` completely: don't read it, mention it or borrow from it. |
+| Mac or Linux, no Clay CLI | `systems/<system>/` | Tell them the system needs the Clay CLI and offer to install it with Clay's own plugin (its `setup` skill installs it and opens the sign-in). Go on once `clay whoami` works. Never offer the connector version. |
+| Windows, no Clay CLI | `systems-mcp/<system>/`, if it exists | The only case for the connector version. If the folder doesn't exist, say the system needs the Clay CLI. Check the Clay connector is connected (ask it which workspace it's on); without it, stop and say what's needed. |
+
+Say in one line which version you are copying and why. A copy of the connector version made earlier is replaced by the CLI version as soon as the person has the Clay CLI.
+
 ## 1. Read before asking
 
-1. **The system's README.** Read `systems/<system>/README.md` in full, then every `SKILL.md`, `settings.md` and reference file of that system.
+1. **The system's README.** Read `systems/<system>/README.md` in full, then every `SKILL.md`, `settings.md` and reference file of that system. Only in the Windows case from step 0, read `systems-mcp/<system>/` instead, and use that folder everywhere this guide says `systems/<system>/`.
 2. **GTM context.** Look in `~/.claude/CLAUDE.md` for a block between `gtm-context:start` and `gtm-context:end`.
    - A Notion Hub link: fetch the Hub, then only the pages this system needs (the README says which).
    - A repo and `~/gtm-context`: read `~/gtm-context/gtm/README.md`, then the pages it links.
@@ -12,6 +29,7 @@ Claude follows this guide when someone asks to copy a system from this repo into
 3. **Do-not-contact (optional).** Look for a block between `do-not-contact:start` and `do-not-contact:end` in `~/.claude/CLAUDE.md`. If it is there, the copy uses it. If not, carry on without it: don't warn, don't mark rows, don't ask them to build one. Customers and open deals are always checked from the GTM context and CRM either way.
 4. **Voice.** Look for an installed `<name>-voice` skill.
 5. **Tools and sources.** Check which connectors and CLIs the README lists are connected (for Clay: `clay whoami`). Note what is missing and what the fallback is (an export, a pasted thread, a CSV). Look at the real data the system will read, not just its name: a client spreadsheet is not a pipeline, and an export has an end date.
+   - **Clay** is settled in step 0. In the Windows case only: the connector version drives the Clay Agent in the built-in browser of the Claude desktop app, never in Claude in Chrome. Open Clay there and ask them to sign in once in that browser pane. Then open Workflows, New: if the Clay Agent's box ("What should we build today?") is there, `{{CLAY_AGENT}}` is yes. Without the desktop app's browser, the skill gives them each prompt to paste by hand.
 
 Never copy the GTM context into the skill. The skill reads it at run time. What the copy holds is only how to find it (the Hub link or the repo path) and the settings.
 
@@ -37,7 +55,7 @@ Fill every `{{PLACEHOLDER}}` in the files under `skills/`. Copy the system READM
 
 ## 4. Save it in a folder
 
-Save the filled system in `~/my-growth-systems/<system>/`, with the same layout as the blueprint (`README.md`, `skills/<skill>/`). Never straight into `~/.claude/skills/`, and never inside this blueprint repo.
+Save the filled system in `~/my-growth-systems/<system>/`, with the same layout as the blueprint (`README.md`, `skills/<skill>/`). The Windows connector version goes in the same place, under the same system name. Never straight into `~/.claude/skills/`, and never inside this blueprint repo.
 
 - **If that folder already exists:** stop and ask. Offer to compare first. Never overwrite.
 - **State folder:** create `~/.growth-systems/<system>/` for run data. It holds real people's names, so it never goes next to the skills and never into a repo.

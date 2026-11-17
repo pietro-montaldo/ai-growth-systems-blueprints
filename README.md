@@ -30,10 +30,24 @@ At the end it asks one simple question: **do you want to publish it on your GitH
 
 You can copy one system or all of them. Start with one.
 
+## Clay systems need the Clay CLI
+
+The Clay systems in `systems/` are written for the Clay CLI, and that is the version to use. Claude checks your computer and the CLI before copying a Clay system:
+
+- **You have the Clay CLI:** you get the version in `systems/`. Nothing else applies.
+- **Mac or Linux without it:** Claude tells you to install it, and can do it for you with Clay's own plugin. Then you get the version in `systems/`.
+- **Windows without it:** this is the only case for the fallback in `systems-mcp/`. It works with the Clay connector in Claude plus the Clay Agent inside Clay. Claude drives the Clay Agent in the built-in browser of the Claude desktop app, and you approve each step.
+
+| System | Windows fallback (no Clay CLI) |
+| --- | --- |
+| Lookalike campaigns | [systems-mcp/lookalike-campaigns](systems-mcp/lookalike-campaigns/README.md) |
+
+The Clay Agent is on Clay's Launch, Growth and Enterprise plans. Without it, the fallback walks you through those steps in Clay by hand.
+
 ## How each system folder is laid out
 
 ```
-systems/<system>/
+systems/<system>/          (systems-mcp/<system>/ has the same layout)
   README.md          what it does, how the parts fit, tools, costs, what you decide
   skills/<skill>/
     SKILL.md         the skill, with {{PLACEHOLDERS}} Claude fills in for you

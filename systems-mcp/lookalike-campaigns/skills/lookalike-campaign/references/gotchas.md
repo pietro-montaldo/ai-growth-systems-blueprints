@@ -1,0 +1,49 @@
+# What goes wrong
+
+Read before step 2. Add your own after each run.
+
+- **The seed name is wrong.** A customer's name in conversation is often not its exact name. Confirm the seed by domain.
+- **Firmographic lookalikes are not enough.** An industry filter alone pulls in companies that serve a different buyer. A description filter fixes most of it. A company far from the seed's market has no reason to know it: that's why recognition is scored.
+- **Only about 1 in 4 searched companies passes the bar.** Plan about 4 candidates per company wanted, and set the target on companies with a work email, not on candidates.
+- **Search limits change with your plan.** The connector doesn't show the quota: read the error text when a search stops; never assume.
+- **A people search gives only the company name.** That's why the search starts from companies. In the people-first flow, domains need Enrich Person.
+- **People hold several current jobs.** Match the role to the company the search found.
+- **Clay sometimes returns the social network as the employer.** Blank it and check by hand.
+- **One accented LinkedIn link can reject a whole batch.** Percent-encode.
+- **Results come a page at a time.** Searches give 20 per page, function results 100. Page through them, or you lose rows.
+- **Names carry badges:** letters after a surname, "(HIRING)", an emoji. Clean them before they reach an email.
+- **Company names read badly in subjects:** "Inc", taglines after a dash, a trailing "Co." that becomes "Co..". Clean them and show the list.
+- **The customer and CRM check can return nothing because it's broken.** Test it on a known customer first.
+- **The decision maker search returns noise:** chapter volunteers, board members, members, assistants, a membership tier written as a job. Filter those titles and check every pick.
+- **Titles carry extras.** "CEO | Speaker" is a CEO; judge only the first part. "Head of Partnerships" and "Chief of Staff" look like leaders and aren't.
+- **Short employer names match everything.** A blank or 2 to 3 letter name never matches a company.
+- **Re-running a step can undo your work.** Re-running the people search keeps the contacts already found, and a dropped company stays dropped when the list is rebuilt.
+- **Employer names on profiles differ from Clay's company names.** Map the unmatched ones to their domain by hand.
+- **Work Email can return an address at another domain.** Fine for the company's own other domain. An address at another business (the founder's other company) drops the company.
+- **A person carries one campaign tag.** Tagging moves them off another list and pauses them there.
+- **The spam check marks fixed sentences.** A fixed proof sentence can be worth the points.
+- **People are not linked to their companies unless the workflow links them.** The Company column in Clay stays empty even with the company name written on the person. Upsert the company first, link the person to it, and check that no one on the list is unlinked. The connector can't see the link: the Clay Agent check can.
+- **The company's location is not the person's.** Writing the company's city on the person leaves the person's own City, State and Country empty. Map the person's location from the search or Find People result onto the person's fields, in the same workflow run.
+- **Records are thin without Enrich Company.** The search gives a size bucket and a location string; website, city, exact headcount and founding year come from Enrich Company on every company.
+- **Broad searches bury the best fits.** A second round of narrower searches, split the way the seed's world divides, can find many more. Pick the split that fits the seed.
+- **Find company lookalikes follows Clay's industry.** It charges per result and matches on industry, topic and size, so a seed filed under the wrong industry gets the wrong kind of company back. It is still step one: read a batch of 10, then fix the seed set and keywords. Competitor lookups mostly confirm names you have.
+- **The lookalikes panel in Clay's own app has no country or size filters.** Run it through the Clay Agent, which has them, not from Find leads.
+- **Communities and networks count members as staff** in Clay. Exact headcount over the max can't be a hard rule for them.
+- **Find People at Company finds a leader at only a few companies** and doesn't skip people already on campaign lists.
+- **Enrich Company can resolve to a sister company.** Check the returned name.
+- **The seed's own group looks like perfect lookalikes.** Exclude its parent and sister brands.
+- **A build can start from another session.** Read the run folder, and ask the Clay Agent for the draft campaigns in Clay before building. Update a draft rather than create a second.
+- **The home page box in Clay can be Sculptor, not the Clay Agent.** Sculptor builds tables and searches only. Use Workflows, New.
+- **The connector's list of inputs isn't exact.** Work Email needs the full name, the company domain and the company name. The error names the real required inputs.
+- **Numbers sent as text fail.** Headcount and founded go to the workflow as numbers.
+- **The connector's totals are page sizes.** Count by paging.
+- **The "add people" workflow overwrites names.** In the setup test, send your first, last and full name exactly as they should read in Clay, not your first name as the full name.
+- **Enrichment before the checks wastes credits.** Run the free Audiences, CRM and customers checks first, then Enrich Company on what's left.
+- **The Clay Agent can't quote or enforce a credit cap.** Say in the prompt that the limit of results is the cap and you accept the charge, or it stops and asks again.
+- **Lookalikes can come back empty in a small market**, even with one seed and no keywords. Empty calls are refunded. After two, use the connector's searches.
+- **A strict bar in a small market passes about 1 in 20 searched companies**, not 1 in 4. Plan more search pages, or widen the market one step with a yes.
+- **Workflow and function results repeat every input.** Follow progress on one record and confirm writes with the Clay Agent's count.
+- **A draft follows its tag.** People written later with the same tag join the existing draft. Check the count; never build a second campaign.
+- **A big run fills the chat.** Every connector result lands in the conversation. Work in batches of about 50, save to `$RUN` as you go, and resume from `companies.json`.
+- **Clay's support chat can open over the Clay Agent.** Close it and type into the box that answers as the Clay Agent, never into support.
+- **Use the built-in browser, never Claude in Chrome**, to work with the Clay Agent. Sign in there once, to the same workspace as the connector.

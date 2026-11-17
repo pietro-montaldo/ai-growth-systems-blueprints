@@ -8,12 +8,21 @@ Follow [COPY-GUIDE.md](COPY-GUIDE.md) step by step. In short: read the system, r
 
 Never edit the blueprint files while copying. Never save a filled-in copy, run data or anyone's personal details inside this repo.
 
+### Clay systems: CLI first, no exceptions
+
+Before copying or running any Clay system, check the person's computer and whether `clay whoami` works (ask only if you can't tell). COPY-GUIDE.md step 0 has the table.
+
+- **The Clay CLI works:** use `systems/<system>/` only. `systems-mcp/` plays no role: don't read it, mention it or borrow from it.
+- **Mac or Linux without the CLI:** tell them they need the Clay CLI and offer to install it with Clay's plugin. Never the connector version.
+- **Windows without the CLI, and only then:** `systems-mcp/<system>/`, the fallback. It drives the Clay Agent in the built-in browser of the Claude desktop app, never in Claude in Chrome.
+
 ## When someone asks what a system does
 
-Answer from `systems/<system>/README.md`. Don't copy anything.
+Answer from `systems/<system>/README.md`. Don't copy anything. Mention `systems-mcp/<system>/` only to someone on Windows without the Clay CLI.
 
 ## When editing the blueprints themselves
 
+- `systems-mcp/<system>/` is the Windows fallback of a Clay system, for people with no Clay CLI: the Clay connector does the searches, enrichment and workflow runs, and the Clay Agent builds what the connector can't, from prompts the skill types in the built-in browser. Keep it in step with its twin in `systems/`: a change to one system's logic goes into both, unless it is about the CLI, the connector or the browser itself. Each fallback README and SKILL.md opens with the CLI check and stops when the CLI works.
 - Keep them anonymous: no real names, companies, prices, Notion, Clay, Slack or Drive ids, hardcoded `mcp__<id>` tool names, or local paths. Examples use made-up companies (Acme, Brightlane, Kito) and first names only.
 - Any step that writes people or companies to Clay keeps the records complete: the company upserted by domain with its full Enrich Company record, each person linked to it (the account link, not just the company name) and carrying their own city, state, country and location from data the system already has. After the write, check no one is unlinked and list who has no country. Never pay to fill fields nothing will use.
 - Every value that changes from one business to the next is a `{{PLACEHOLDER}}` in upper snake case, listed in that system's README "What you decide" table with where Claude finds it and a default when there is one.
