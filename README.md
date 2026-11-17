@@ -40,6 +40,7 @@ The Clay systems in `systems/` are written for the Clay CLI, and that is the ver
 
 | System | Windows fallback (no Clay CLI) |
 | --- | --- |
+| Company signals | [systems-mcp/company-signals](systems-mcp/company-signals/README.md) |
 | Lookalike campaigns | [systems-mcp/lookalike-campaigns](systems-mcp/lookalike-campaigns/README.md) |
 
 The Clay Agent is on Clay's Launch, Growth and Enterprise plans. Without it, the fallback walks you through those steps in Clay by hand.
