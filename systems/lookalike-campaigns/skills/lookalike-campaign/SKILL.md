@@ -2,7 +2,7 @@
 name: lookalike-campaign
 description: "{{YOUR_NAME}}'s lookalike campaign for {{OFFER}}: picks one best customer as the seed, finds companies that would recognise that customer until 100 have a work email (same service, same kind of buyer, similar size, the seed's home market), checks them against the CRM and customers, finds the main decision maker plus a second one to name, looks up work emails, and builds a draft Clay campaign with an A/B test whose copy uses the seed as proof. Also reviews a running campaign and expands it with the next 100 when it works. Use for \"lookalike campaign\", \"lookalikes of <customer>\", \"find companies like <customer> and email them\", \"campaign using <customer> as proof\", \"how is the lookalike campaign doing\", \"expand the lookalike campaign\". Not for signal-based outreach (clay-company-signals) or creator comment lists (linkedin-creator-signals), and it never launches or sends a campaign."
 metadata:
-  version: "0.2.1"
+  version: "0.2.2"
 ---
 
 # Lookalike campaign
@@ -28,7 +28,7 @@ If Clay's own skills are installed, follow them for the mechanics (`clay:searche
 
 ## Before starting
 
-1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP, product and offer, and messaging pages. Query {{CUSTOMERS_SOURCE}} and {{CRM}} with filters only. Never copy their content here.
+1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP, product and offer, and messaging pages. Query the customers list and the CRM named in `settings.md` with filters only. Never copy their content here.
 2. **Voice:** your `<name>-voice` skill if installed.
 3. `clay whoami` and the credit balance. The search quota shows on the first search page: check it before promising 100.
 4. Settings have no Clay ids yet: do the one-time setup in `references/clay-build.md` first.
@@ -50,7 +50,7 @@ Forecast Enrich Company for every keep and check company, from the price in sett
 
 ### 4. Exclusions (free)
 
-The search already skips every company in your Clay Audiences. Companies added another way (the named list, by hand) are checked against "Already targeted" in settings. Then check {{CRM}} and the customers list, on companies now and on people once they are found. Test the check on one known customer first, so an empty result means clear, not broken. If you have a do-not-contact list, run check-do-not-contact too. Report what dropped and why.
+The search already skips every company in your Clay Audiences. Companies added another way (the named list, by hand) are checked against "Already targeted" in settings. Then check the CRM and the customers list (both in `settings.md`), on companies now and on people once they are found. Test the check on one known customer first, so an empty result means clear, not broken. If you have a do-not-contact list, run check-do-not-contact too. Report what dropped and why.
 
 ### 5. Decision makers (search quota, then credits)
 

@@ -43,7 +43,7 @@
 
 ## Campaigns
 
-Find People at Company doesn't skip people already on a campaign list, so before it runs, read the people on the lists below and leave them out.
+Find People at Company doesn't skip people already on a campaign list, so before it runs, read the people on the lists below and leave them out. Filled when you copied the system if you had past campaigns then, and after each run.
 
 | Campaign | Seed | People list | People | Date | Status |
 | --- | --- | --- | --- | --- | --- |

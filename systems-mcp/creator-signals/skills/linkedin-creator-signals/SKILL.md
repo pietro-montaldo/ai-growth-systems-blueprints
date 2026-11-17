@@ -2,7 +2,7 @@
 name: linkedin-creator-signals
 description: "{{YOUR_NAME}}'s weekly LinkedIn creator signals, part 1 of 3: finds and qualifies buyers for {{OFFERS_IN_SCOPE}} (Windows fallback without the Clay CLI: Clay runs through the Clay connector) in the comments of a saved list of non-competing creators. Scrapes this week's posts with Apify, keeps only posts about something you sell, forecasts and asks before scraping comments, drops empty, keyword and AI-written comments and clear non-fits, forecasts and asks before Clay enrichment, scores people against the live ICP, reviews every pause with you in chat (links, why each one was picked, confirm or change by number), then asks whether the list goes to LinkedIn or email. Use for \"run creator signals\", \"LinkedIn signals this week\", \"approve the comment scrape\", \"approve the Clay enrichment\", \"add a creator to the signals list\", \"who commented on my creators' posts\". Not when the Clay CLI works (use the CLI version), not on Mac or Linux (install the Clay CLI), not for companies that visited your site (use website-visitor-digest), not for one post outside the saved list, and it never sends anything."
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # LinkedIn creator signals (part 1: find and qualify), Windows fallback
@@ -56,7 +56,7 @@ If you approve several steps at once ("go ahead with comments and Clay up to 40"
 
 **4. Comments.** Apply the numbers you switched to `posts.json` (new forecast if they changed it). Run the comments actor on the kept posts. Save to `$RUN/comments.json`: comment text, name, headline, profile link, post. Log the real spend against the forecast. Add the posts to `$STATE/posts-done.csv`.
 
-**5. Screen.** One row per person; their best comment decides. Drop anyone already in {{KNOWN_PEOPLE_SOURCES}} (search by LinkedIn link, in batches), anyone in `$STATE/seen.csv` from the last 90 days, and the creator. Then read every comment and judge it per `references/screening.md`. If you have a do-not-contact list, run its check on the people kept.
+**5. Screen.** One row per person; their best comment decides. Drop anyone already in the known-people sources in `settings.md` (search by LinkedIn link, in batches), anyone in `$STATE/seen.csv` from the last 90 days, and the creator. Then read every comment and judge it per `references/screening.md`. If you have a do-not-contact list, run its check on the people kept.
 
 **6. Enrichment forecast.** People kept × your Enrich Person price. Set `stage: pause-2`.
 

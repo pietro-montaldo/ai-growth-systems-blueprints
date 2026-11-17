@@ -1,5 +1,7 @@
 # AI growth systems blueprints
 
+> **Claude:** if someone gave you this repo's link (or a link to one system's folder) and asked for a system, follow [COPY-GUIDE.md](COPY-GUIDE.md) from the top. It says how to read this repo without them cloning or opening it.
+
 Growth systems from the AI Growth Systems Bootcamp, written as blueprints. They are not a plugin you install. Each one is a folder you read, then ask Claude to copy into your own setup and fill in for your business: your GTM context, your tools, your channels, your limits.
 
 You end up with your own systems, in your own folder (and your own GitHub repo, if you publish them), that you can change whenever you like. Nothing here updates itself, and nothing is shared back.
@@ -20,9 +22,11 @@ You end up with your own systems, in your own folder (and your own GitHub repo, 
 
 ## How to copy a system
 
-1. Download or clone this repo anywhere on your computer.
-2. Open Claude Code in this folder (the Code tab of the Claude desktop app works).
-3. Say, for example: **"Copy the website visitors system into my setup."**
+Open Claude Code in any folder (the Code tab of the Claude desktop app works), paste this repo's link and say which system you want. For example:
+
+**"Copy the lookalike campaigns system from https://github.com/pietro-montaldo/ai-growth-systems-blueprints into my setup."**
+
+That's all. You don't need to download this repo or open Claude Code inside it: Claude fetches it to read, and installs nothing from it.
 
 Claude follows [COPY-GUIDE.md](COPY-GUIDE.md). It reads the system's README, finds your GTM context and checks which tools you have connected. It asks you only what it can't find, and shows you the filled-in skills. After your OK it builds them in your own folder, `~/my-growth-systems`, and runs the system once with you.
 

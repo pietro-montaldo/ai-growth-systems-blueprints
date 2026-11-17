@@ -1,5 +1,7 @@
 # Creator signals
 
+Copying this system? Claude follows [COPY-GUIDE.md](../../COPY-GUIDE.md) at the root of this repo. A link to this folder is enough to start.
+
 Every week, find real buyers in the comments of LinkedIn creators you pick, who speak to your audience but don't sell what you sell. The system keeps only posts about something you sell, drops empty, keyword and AI-written comments, enriches the people left and scores them against your live ICP. You review every step in chat: each post and person with its link and why it was picked, and you confirm or change it by number. Then you pick one channel for the confirmed list: personal LinkedIn messages you send by hand from an outreach file (a Google Sheet, or Excel), or a one-off email campaign in Clay that you launch yourself.
 
 Best for offers sold to individuals or small teams (courses, coaching, productized services, tools for solo experts), where the buyer is the person commenting.

@@ -1,5 +1,7 @@
 # Website visitors
 
+Copying this system? Claude follows [COPY-GUIDE.md](../../COPY-GUIDE.md) at the root of this repo. A link to this folder is enough to start.
+
 A short daily summary of the companies that visited your website: which offer and ICP card they fit, how engaged they were, whether they came back, and whether you already have a warm path in on LinkedIn. You decide who to contact. The system never contacts anyone and never mentions the visit.
 
 One skill: `website-visitor-digest`.

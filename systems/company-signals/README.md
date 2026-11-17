@@ -1,5 +1,7 @@
 # Company signals
 
+Copying this system? Claude follows [COPY-GUIDE.md](../../COPY-GUIDE.md) at the root of this repo. A link to this folder is enough to start.
+
 A system that runs by itself in your Clay workspace. A watchlist of companies that look like your best customer. Clay signals that watch them every week for the buying triggers in your ICP: job posts, new hires in the buyer role, news, research intent. And a Clay workflow that, when a signal fires, checks it is real, finds one person who can sign, finds their work email and saves them to a buyer list. Later, only when you ask, it can also enrol them in a Clay campaign.
 
 Best for B2B offers sold to companies, where a change at the company (a new leader, a team being built) makes it ready to buy.

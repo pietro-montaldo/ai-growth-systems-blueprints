@@ -46,14 +46,14 @@
 
 ## Already targeted
 
-Company lists already used by this or another campaign. Their companies are never added again.
+Company lists already used by this or another campaign. Their companies are never added again. Filled when you copied the system if you had past lists then, and after each run.
 
 | List | Id | Campaign | Date |
 | --- | --- | --- | --- |
 
 ## Campaigns
 
-Find People at Company doesn't skip people already on a campaign list, so before it runs, read the people lists below (and creator signals' past campaign lists, if you have them) and leave those people out.
+Find People at Company doesn't skip people already on a campaign list, so before it runs, read the people lists below (and creator signals' past campaign lists, if you have them) and leave those people out. Filled when you copied the system if you had past campaigns then, and after each run.
 
 | Campaign | Seed | Campaign id | People list | Company list | People | Date | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |

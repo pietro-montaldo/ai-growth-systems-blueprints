@@ -2,7 +2,7 @@
 name: lookalike-campaign
 description: "{{YOUR_NAME}}'s lookalike campaign for {{OFFER}}, Windows fallback for a Clay setup without the Clay CLI, using the Clay connector and the Clay Agent in the built-in browser: picks one best customer as the seed, finds companies that would recognise that customer until {{TARGET_COMPANIES}} have a work email (same service, same kind of buyer, similar size, the seed's home market), checks them against the CRM and customers, finds the main decision maker plus a second one to name, looks up work emails through the connector, writes the people to Clay, and types the prompts the Clay Agent uses to build the list and a draft A/B campaign whose copy uses the seed as proof. Also reviews a running campaign and expands it when it works. Use for \"lookalike campaign\", \"lookalikes of <customer>\", \"find companies like <customer> and email them\", \"campaign using <customer> as proof\", \"how is the lookalike campaign doing\", \"expand the lookalike campaign\". Not when the Clay CLI works (use the CLI version), not on Mac or Linux (install the Clay CLI), not for signal-based outreach or creator comment lists, and it never launches or sends a campaign."
 metadata:
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Lookalike campaign: Windows fallback (Clay connector + Clay Agent)
@@ -38,7 +38,7 @@ Settings are in `settings.md`. Run data lives in `~/.growth-systems/lookalike-ca
 ## Before starting
 
 0. **Clay CLI check:** if `clay whoami` works, stop: this is the wrong version. Use the CLI version of the lookalike campaigns. On a Mac or Linux computer without the CLI, stop and tell the person to install the Clay CLI.
-1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP, product and offer, and messaging pages. Query {{CUSTOMERS_SOURCE}} and {{CRM}} with filters only. Never copy their content here.
+1. **GTM context:** {{GTM_CONTEXT}}. Read the ICP, product and offer, and messaging pages. Query the customers list and the CRM named in `settings.md` with filters only. Never copy their content here.
 2. **Voice:** your `<name>-voice` skill if installed.
 3. **Clay connector:** ask it which workspace it is connected to, and say the name back. If the connector isn't connected, stop and say so.
 4. **Built-in browser:** open Clay in it and check the person is signed in to the same workspace. If the desktop app's browser isn't available, use the paste-by-hand round trip in `references/clay-agent.md`.
@@ -58,7 +58,7 @@ Start with Clay's **Find company lookalikes**, through the Clay Agent: Claude wr
 
 ### 3. Exclusions (free, before any credits)
 
-Run these on every keep and check company before Enrich Company, so no credits go on companies that would drop anyway. The connector searches skip every company already in your Clay Audiences. Companies from the lookalike search and the named list are checked against Audiences too (`references/enrich-and-check.md`). Then check {{CRM}} and the customers list, on companies now and on people once they are found. Test each check on one known match first, so an empty result means clear, not broken. If you have a do-not-contact list, run check-do-not-contact too. Report what dropped and why.
+Run these on every keep and check company before Enrich Company, so no credits go on companies that would drop anyway. The connector searches skip every company already in your Clay Audiences. Companies from the lookalike search and the named list are checked against Audiences too (`references/enrich-and-check.md`). Then check the CRM and the customers list (both in `settings.md`), on companies now and on people once they are found. Test each check on one known match first, so an empty result means clear, not broken. If you have a do-not-contact list, run check-do-not-contact too. Report what dropped and why.
 
 ### 4. Pause: credits for full company records
 

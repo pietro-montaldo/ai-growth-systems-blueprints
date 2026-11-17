@@ -1,5 +1,7 @@
 # Company signals: Windows fallback (Clay connector + Clay Agent)
 
+Copying this system? Claude follows [COPY-GUIDE.md](../../COPY-GUIDE.md) at the root of this repo. A link to this folder is enough to start.
+
 **Use this only on Windows without the Clay CLI.** If `clay whoami` works, on any computer, use [`systems/company-signals/`](../../systems/company-signals/README.md) and ignore this folder. On a Mac or Linux computer without the CLI, install the Clay CLI first (Claude can do it with Clay's plugin), then use `systems/`.
 
 The same system as the company signals in `systems/`, for Windows without the Clay CLI. Claude reaches Clay through the Clay connector, and drives the Clay Agent in the built-in browser of the Claude desktop app for what the connector can't do.

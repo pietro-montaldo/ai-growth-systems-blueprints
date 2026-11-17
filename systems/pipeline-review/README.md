@@ -1,5 +1,7 @@
 # Pipeline review
 
+Copying this system? Claude follows [COPY-GUIDE.md](../../COPY-GUIDE.md) at the root of this repo. A link to this folder is enough to start.
+
 A weekly run that keeps your sales pipeline current and moving. It reads the last 7 days of inbound (email, LinkedIn messages, bookings), your new buyers and signed deals, and every open deal in your CRM. It makes every CRM change it is sure of, and brings every doubt to you as a numbered decision. You review one report: what was done, and what needs you. Nothing is ever sent.
 
 One skill: `pipeline-review`.

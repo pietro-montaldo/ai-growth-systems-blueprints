@@ -1,8 +1,8 @@
 ---
 name: pipeline-review
-description: "{{YOUR_NAME}}'s weekly pipeline run for {{BUSINESS}}, action first: reviews the last 7 days of inbound ({{CHANNELS}}), new buyers and signed deals, and every open deal in {{CRM}}. It makes every CRM change it is sure of (new deals, field updates, forward stage moves, Won with proof of payment, Lost only on an explicit no) and ends with a report of what it did plus a numbered list of decisions. Use for \"review my inbound\", \"update the CRM\", \"move my pipeline\", \"who reached out\", \"who bought\", \"which deals need a nudge\", or the weekly scheduled run. Not for post-call follow-ups or prospecting new people, and it never sends anything."
+description: "{{YOUR_NAME}}'s weekly pipeline run for {{BUSINESS}}, action first: reviews the last 7 days of inbound ({{CHANNELS}}), new buyers and signed deals, and every open deal in your CRM. It makes every CRM change it is sure of (new deals, field updates, forward stage moves, Won with proof of payment, Lost only on an explicit no) and ends with a report of what it did plus a numbered list of decisions. Use for \"review my inbound\", \"update the CRM\", \"move my pipeline\", \"who reached out\", \"who bought\", \"which deals need a nudge\", or the weekly scheduled run. Not for post-call follow-ups or prospecting new people, and it never sends anything."
 metadata:
-  version: "0.1.1"
+  version: "0.1.2"
 ---
 
 # Pipeline review

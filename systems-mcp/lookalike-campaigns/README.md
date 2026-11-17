@@ -1,5 +1,7 @@
 # Lookalike campaigns: Windows fallback (Clay connector + Clay Agent)
 
+Copying this system? Claude follows [COPY-GUIDE.md](../../COPY-GUIDE.md) at the root of this repo. A link to this folder is enough to start.
+
 **Use this only on Windows without the Clay CLI.** If `clay whoami` works, on any computer, use [`systems/lookalike-campaigns/`](../../systems/lookalike-campaigns/README.md) and ignore this folder. On a Mac or Linux computer without the CLI, install the Clay CLI first (Claude can do it with Clay's plugin), then use `systems/`.
 
 The same system as the lookalike campaigns in `systems/`, for Windows without the Clay CLI. Claude reaches Clay through the Clay connector, and drives the Clay Agent in the built-in browser of the Claude desktop app for what the connector can't do.
@@ -83,11 +85,11 @@ Clay also sets a credit limit per connected user for the connector (in Clay's se
 | `{{YOUR_NAME}}` | Your first name, for the description and signature | `~/.claude/CLAUDE.md`, GTM context, or ask | |
 | `{{GTM_CONTEXT}}` | Notion Hub link, or `~/gtm-context/gtm/README.md` | `gtm-context` block in `~/.claude/CLAUDE.md` | |
 | `{{CUSTOMERS_SOURCE}}` | Where your customers are, with whether each one may be named or quoted | GTM context customers database or CSV | |
-| `{{CRM}}` | Your CRM, to drop companies with an open deal | Connected tools, GTM context | |
+| `{{CRM}}` | Your CRM, to drop companies with an open deal: its name, where it is, and which stages count as open | Connected tools, GTM context | |
 | `{{OFFER}}` | The offer this campaign sells | Product page | Your highest-value company offer |
 | `{{BUYER_TITLES}}` | Titles of the main decision maker | ICP card, past won deals | CEO, Founder, Managing Director, President, Executive Director, COO |
 | `{{SECOND_TITLES}}` | Titles for the second person you name | ICP card | Co-founder, COO, MD, Partner |
-| `{{CREDIBILITY_LINE}}` | One true, checkable line about you for version A ("I also teach this to 300 operators") | Product page, proof | Ask |
+| `{{CREDIBILITY_LINE}}` | One true, checkable line about you for version A. Examples: "I also teach this to 300 operators", "We've run this for 40 agencies since 2021", "I ran growth at a 50-person agency for six years" | Product page, proof, customers list | Ask, with these examples and 2 options drafted from your GTM context |
 | `{{TARGET_COMPANIES}}` | How many companies with a Clay-found work email the campaign needs. The search keeps going until it is reached | | 100 |
 | `{{MIN_STAFF}}` | Smallest company worth emailing, by exact headcount from Enrich Company | ICP card | 10 |
 | `{{EXPAND_RULE}}` | When a campaign earns the next 100 | | 2 or more positive replies per 100 leads, counted after the nudge went to everyone |
