@@ -4,6 +4,7 @@
 
 - **GTM context:** {{GTM_CONTEXT}}
 - **CRM:** {{CRM}}
+- **How it is read and written:** {{CRM_HOW}}
 - **Channels:** {{CHANNELS}}
 - **Proof of payment or signature:** {{BUYER_PROOF}}
 - **Your own addresses:** {{OWN_ADDRESSES}}
@@ -11,15 +12,21 @@
 
 ## CRM tables
 
-One row per table, pipeline or spreadsheet. Most small businesses have one.
+One row per table, pipeline or spreadsheet: its link or file, what it is for, which offers go there, and whether the run writes to it or only reads it. Most small businesses have one.
 
 {{CRM_TABLES}}
 
 ## Fields
 
-The fields the skill uses, next to what they are called in your CRM. A field you don't have is "none", or a column you agreed to add.
+The fields you want kept current, next to what they are called in your CRM, and how each is written: always update, fill only when empty, or never. A field you didn't pick is not in this table, and the run doesn't write it.
 
 {{FIELD_MAP}}
+
+## Never touch
+
+Columns the run never writes, even when it has a value for them:
+
+{{NEVER_TOUCH}}
 
 ## Stages
 
@@ -46,6 +53,12 @@ Never logged (flag the meaningful ones, ignore the rest):
 Words that show a buying ask for each offer, used in the inbox searches:
 
 {{OFFER_KEYWORDS}}
+
+## Your rules
+
+Your own rules for this CRM, set up with you and added to after each correction. They win over the defaults in this skill.
+
+{{CRM_RULES}}
 
 ## Follow-ups
 

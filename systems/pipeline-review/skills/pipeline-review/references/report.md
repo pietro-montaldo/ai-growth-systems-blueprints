@@ -7,7 +7,7 @@ Pipeline review YYYY-MM-DD (window YYYY-MM-DD to YYYY-MM-DD)
 
 Counts: Email 6 (by offer) · LinkedIn 4 · bookings 2 · buyers 5 · open deals checked 21
 
-DONE (already in the CRM)
+DONE (already in the CRM; "WOULD DO" in preview mode, nothing written)
 - New deals: Jane, Acme (120 people, agency) · In conversation · "Can you send pricing for 30 people?" · ICP card 1
 - Moved: Tom, Brightlane · Proposal sent → Negotiation · asked for a shorter version
 - Won: Ana · <product> · paid on <date>

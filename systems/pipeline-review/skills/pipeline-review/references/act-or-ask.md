@@ -21,6 +21,5 @@ Record every action under "Done" with its evidence in a few words.
 ## Writing to the CRM
 
 - Search every table before every create. A duplicate is the same person or company asking about the same offer: update it instead. A won client asking for a different offer is a new deal (see above).
-- A spreadsheet or CSV: back it up first (`<name>.backup-YYYY-MM-DD.csv` next to it), then write, then read it back to check.
-- More than about 20 writes: hand them to a subagent with exact values, then check with a query.
-- Dates as ISO dates. LinkedIn links clean, without tracking parameters.
+- If "Your rules" say a change starts a CRM automation (an email sequence, a task, an invoice), that change is always a decision, even when it is on the "do it" side above.
+- How to search, write and check in your CRM, backups for spreadsheets, and big batches: `crm-tools.md`.

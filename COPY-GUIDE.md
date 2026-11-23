@@ -60,7 +60,7 @@ Two rules for the values:
 - **Values inside sentences stay short.** When a placeholder sits inside a sentence of `SKILL.md` or a reference, fill it with a short name that reads well there ("the Notion Sales CRM"). Links, ids, filters and how to read it go in `settings.md`. Read every filled sentence once: if one reads badly, shorten the value.
 - **Every question comes with an example.** Give the example from the README table, and when the GTM context has the facts (customer counts, years, results, what they teach), draft 2 options from them to pick from. Never invent a fact for them.
 
-Ask the questions once, in one message, in plain words. A placeholder the table marks **Asked first** opens the message, and is never filled from your own guess. Recommend an answer for each when you can. Never ask where to save the copy: see step 4.
+Ask the questions once, in one message, in plain words. The one exception: when a system's README says its setup runs in rounds (pipeline review asks about your CRM, then the fields, then your rules), follow its rounds in order, one message each, since each one needs the answer before. A placeholder the table marks **Asked first** opens the message, and is never filled from your own guess. Recommend an answer for each when you can. Never ask where to save the copy: see step 4.
 
 ## 3. Show the copy before saving
 
