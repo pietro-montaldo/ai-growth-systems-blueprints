@@ -15,7 +15,7 @@ Search the inbox for the window, page until empty, and dedupe by thread:
 - what you sent: proposals, quotes, pricing, contracts, invoices,
 - for every open deal with an email: anything from or to that address in the window.
 
-Open every candidate thread in full. Read the latest message in full for anything you will act on. Your own addresses (settings) count as you.
+Open every candidate thread in full. Read the latest message in full for anything you will act on. Never skip a thread because its subject or sender looks like marketing: a reply to one of your own automated emails (an abandoned-checkout or "holding a spot for you" email from your course platform) is a warm buyer. Open every thread that is a reply to your own automated email, and every thread where you replied, whatever the subject. Your own addresses (settings) count as you.
 
 No email connector: ask the person to paste the threads that matter, or to forward them to a folder you can read. Say in the report that email was pasted, not searched.
 
